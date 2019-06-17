@@ -1,0 +1,14 @@
+{
+  "name": "es-pocket-search",
+  "version": "0.0.1",
+  "description": "Node server for interacting with Pocket data as searchable elasticsearch indexes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Scott Wade <sc0ttwad3@gmail.com> (http://sc0ttwad3.com)",
+  "license": "MIT"
+}

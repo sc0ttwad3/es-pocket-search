@@ -1,0 +1,17 @@
+node_modules
+lib
+build
+test
+dist
+coverage
+scratch
+.idea
+.nyc_output
+.vscode
+.env
+*.log
+docs/
+
+yarn.lock
+
+data
