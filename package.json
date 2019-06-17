@@ -10,5 +10,13 @@
     "node"
   ],
   "author": "Scott Wade <sc0ttwad3@gmail.com> (http://sc0ttwad3.com)",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sc0ttwad3/es-pocket-search.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sc0ttwad3/es-pocket-search/issues"
+  },
+  "homepage": "https://github.com/sc0ttwad3/es-pocket-search#readme"
 }
