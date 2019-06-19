@@ -12,6 +12,7 @@
   </a>
 </p>
 
+Made with ☕️ by [sc0ttwad3](http://www.sc0ttwad3.com)
 > Node server for interacting with Pocket data as searchable elasticsearch indexes
 
 ### 🏠 [Homepage](https://github.com/sc0ttwad3/es-pocket-search#readme)
