@@ -1,14 +1,10 @@
 const chalk = require('chalk');
 const dotenv = require('dotenv').config();
 const fastify = require('fastify')({ logger: false });
-const pocket = require('node-getpocket');
+const GetPocket = require('node-getpocket');
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
-
-// token value assigned upon successful authentication/authorization
-const POCKET_CONSUMER_KEY = process.env.POCKET_CONSUMER_KEY;
-let   ACCESS_TOKEN = '';
 
 /**
  * OAuth 2.0 Authentication
@@ -16,6 +12,10 @@ let   ACCESS_TOKEN = '';
  * Using: node-getpocket module
  */
 
+const POCKET_CONSUMER_KEY = process.env.POCKET_CONSUMER_KEY;
+const POCKET_REDIRECT_URI = 'http://localhost:3000/redirect';
+let   POCKET_REQUEST_TOKEN = '';
+let   POCKET_ACCESS_TOKEN = '';
 
  /** HOME PAGE */
 fastify.route({
@@ -50,6 +50,20 @@ fastify.route({
   method: 'GET',
   url: '/login',
   handler: async (request, reply) => {
+    const pocket = new GetPocket({
+      consumer_key: POCKET_CONSUMER_KEY,
+      redirect_uri: POCKET_REDIRECT_URI
+    });
+
+    pocket.getRequestToken({ redirect_uri: POCKET_REDIRECT_URI}, (err, resp, body) => {
+      if (err) {
+        console.log(chalk.redBright('[ X ] ERROR gettomg RequestToken...\n', err));
+      } else {
+        const json = JSON.parse(body)
+        POCKET_REQUEST_TOKEN = json.code;
+        console.log(`Request_Token:  ${POCKET_REQUEST_TOKEN}`);
+      }
+    })
     return { this_is: 'login' }
   }
 });
@@ -60,6 +74,15 @@ fastify.route({
   url: '/logout',
   handler: async (request, reply) => {
     return { this_is: 'logout' }
+  }
+});
+
+/** Callback from PocketAPI */
+fastify.route({
+  method: 'GET',
+  url: '/redirect',
+  handler: async (request, reply) => {
+    return { this_is: 'redirect' }
   }
 });
 
