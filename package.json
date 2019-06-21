@@ -21,15 +21,20 @@
   "homepage": "https://github.com/sc0ttwad3/es-pocket-search#readme",
   "dependencies": {
     "@elastic/elasticsearch": "^7.1.0",
+    "@hapi/boom": "^7.4.2",
+    "@hapi/bourne": "^1.3.2",
+    "@hapi/hoek": "^7.1.0",
     "@hapi/joi": "^15.0.3",
+    "@hapi/topo": "^3.1.0",
+    "@hapi/wreck": "^15.0.1",
     "axios": "^0.19.0",
     "axios-curlirize": "^1.2.0",
     "braces": "^3.0.2",
     "chalk": "^2.4.2",
     "dotenv": "^8.0.0",
     "fastify": "^2.5.0",
-    "fastify-oauth2": "^2.0.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "simple-oauth2": "^2.2.1"
   }
 }

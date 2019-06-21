@@ -1,9 +1,20 @@
 const chalk = require('chalk');
 const dotenv = require('dotenv').config();
-const fastify = require('fastify')({ logger: false })
+const fastify = require('fastify')({ logger: false });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
+
+// token value assigned upon successful authentication/authorization
+const POCKET_CONSUMER_KEY = process.env.POCKET_CONSUMER_KEY;
+let   ACCESS_TOKEN = '';
+
+/**
+ * OAuth 2.0 Authentication
+ *
+ * Using: node-getpocket module
+ */
+
 
 // Declare a route
 fastify.route({
