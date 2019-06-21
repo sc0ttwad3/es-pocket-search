@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 const dotenv = require('dotenv').config();
 const fastify = require('fastify')({ logger: false });
+const pocket = require('node-getpocket');
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
@@ -16,7 +17,7 @@ let   ACCESS_TOKEN = '';
  */
 
 
-// Declare a route
+ /** HOME PAGE */
 fastify.route({
   method: 'GET',
   url: '/',
@@ -42,7 +43,25 @@ fastify.route({
   handler: async (request, reply) => {
     return { hello: 'world' }
   }
-})
+});
+
+/** LOGIN */
+fastify.route({
+  method: 'GET',
+  url: '/login',
+  handler: async (request, reply) => {
+    return { this_is: 'login' }
+  }
+});
+
+/** LOGOUT */
+fastify.route({
+  method: 'GET',
+  url: '/logout',
+  handler: async (request, reply) => {
+    return { this_is: 'logout' }
+  }
+});
 
 // Boostrap server!
 const start = async () => {

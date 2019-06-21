@@ -34,7 +34,7 @@
     "dotenv": "^8.0.0",
     "fastify": "^2.5.0",
     "fs": "0.0.1-security",
-    "path": "^0.12.7",
-    "simple-oauth2": "^2.2.1"
+    "node-getpocket": "^1.0.0",
+    "path": "^0.12.7"
   }
 }
