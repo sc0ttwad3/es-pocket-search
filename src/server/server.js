@@ -68,7 +68,7 @@ fastify.route({
 
     pocket.getRequestToken({ redirect_uri: POCKET_REDIRECT_URI}, (err, resp, body) => {
       if (err) {
-        console.log(chalk.redBright('[ X ] ERROR gettomg RequestToken...\n', err));
+        console.log(chalk.redBright('[ X ] ERROR getting RequestToken...\n', err));
       } else {
         const json = JSON.parse(body)
         POCKET_REQUEST_TOKEN = json.code;
