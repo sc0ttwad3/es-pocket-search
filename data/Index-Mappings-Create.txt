@@ -1,0 +1,72 @@
+# Index Mapping Create
+
+## API call to create index with mappings
+
+
+PUT my_index
+{
+  "mappings": {
+    "properties": {
+      "title":    { "type": "text"  },
+      "name":     { "type": "text"  },
+      "age":      { "type": "integer" },
+      "created":  {
+        "type":   "date",
+        "format": "strict_date_optional_time||epoch_millis"
+      }
+    }
+  }
+}
+
+
+## Sample Document
+
+{
+    "319540134": {
+      "item_id":        { "type": "text" },
+      "resolved_id":    { "type": "text" },
+      "given_url":      { "type": "text" },
+      "given_title":    { "type": "text" },
+      "favorite":       { "type": "integer" },
+      "status":         { "type": "integer" },
+
+      "time_added":     {
+        "type":   "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "time_updated":   {
+        "type":   "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "time_read":      {
+        "type":   "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+      "time_favorited": {
+        "type":   "date",
+        "format": "yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+      },
+
+      "sort_id":        { "type": "integer" },
+      "resolved_title": { "type": "text" },
+      "resolved_url":   { "type": "text" },
+      "excerpt":        { "type": "text" },
+      "is_article":     { "type": "integer" },
+      "is_index":       { "type": "integer" },
+      "has_video":      { "type": "integer" },
+      "has_image":      { "type": "integer" },
+      "word_count":     { "type": "integer" }
+      "lang":           { "type": "text" },
+
+
+
+      "domain_metadata": {
+        "name": "The Verge",
+        "logo": "https://logo.clearbit.com/theverge.com?size=800",
+        "greyscale_logo": "https://logo.clearbit.com/theverge.com?size=800&greyscale=true"
+      },
+
+
+      "listen_duration_estimate":     { "type": "integer" }
+    }
+}
