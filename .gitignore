@@ -14,4 +14,4 @@ docs/
 
 yarn.lock
 
-data
+pocket-article*.json
