@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const { Client } = require('@elastic/elasticsearch');
+const dotenv = require('dotenv').config();
 
 
 const client = new Client({
@@ -8,29 +9,26 @@ const client = new Client({
 });
 
 /** Check the ES connection status */
-async function checkConnection() {
-  let isConnected = false;
-  while (!isConnected) {
+const checkEsConnection = async () => {
+  console.log('--------------------------------------------');
+  console.log('Connecting to ES...');
+  try {
+    const health = await client.cluster.health({});
+    console.log(health);
+    console.log(chalk.greenBright('\n[✓] Connected to ES index...'));
+  } catch (err) {
+    console.log(chalk.red('\n[ ] Connection failed.'), err);
+  } finally {
     console.log('--------------------------------------------');
-    console.log('Connecting to ES...');
-    try {
-      const health = await client.cluster.health({});
-      console.log(health);
-      isConnected = true;
-      console.log(chalk.greenBright('\n[✓] Connected to ES index...'));
-    } catch (err) {
-      console.log(chalk.red('\n[ ] Connection failed.'), err);
-    } finally {
-      console.log('--------------------------------------------');
-      break;
-    }
   }
 }
 
-checkConnection();
+// If running this file directly use this
+// checkEsConnection();
 
 
 module.exports = {
+  checkEsConnection,
   client,
   // resetIndex
 };

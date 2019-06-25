@@ -1,11 +1,14 @@
 const chalk = require('chalk');
-const dotenv = require('dotenv').config();
+const { checkEsConnection, client } = require('./es-connection');
 const { dd, du } = require('dumper');
 const fastify = require('fastify')({ logger: false });
+require('dotenv').config();
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
 
+// Routing
+// --------------------------------------------------
 
  /** HOME PAGE */
 fastify.route({
@@ -32,6 +35,15 @@ fastify.route({
   },
   handler: async (request, reply) => {
     return { hello: 'world' }
+  }
+});
+
+/** POCKET */
+fastify.route({
+  method: 'GET',
+  url: '/pocket',
+  handler: async (request, reply) => {
+    return { this_is: 'pocket' }
   }
 });
 
@@ -63,10 +75,11 @@ fastify.route({
 });
 
 // Boostrap server!
+// --------------------------------------------------
 const start = async () => {
   try {
-    await fastify.listen(port);
-    //fastify.log.info(`server listening on ${fastify.server.address().port}`);
+    await fastify.listen(port)
+    //fastify.log.info(`server listening on ${fastify.server.address().port}`);;
     console.log(chalk.green(`[ ✓ ] server in ${mode} mode listening on ${fastify.server.address().port}`));
     console.log(chalk.greenBright('[Press CTRL-C to stop]'));
   } catch (err) {
@@ -75,6 +88,10 @@ const start = async () => {
     process.exit(1);
   }
 };
+
+if (process.env.NODE_ENV == 'development') {
+  checkEsConnection();
+}
 
 // Start the server!
 start();
