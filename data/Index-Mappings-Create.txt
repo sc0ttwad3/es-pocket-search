@@ -2,8 +2,12 @@
 
 
 ## API call to create index with mappings
+curl -X PUT -H "Content-Type:application/json" -d '{"mappings":{"properties":{"item_id":{"type":"text"},"resolved_id":{"type":"text"},"given_url":{"type":"text"},"given_title":{"type":"text"},"favorite":{"type":"integer"},"status":{"type":"integer"},"time_added":{"type":"date"},"time_updated":{"type":"date"},"time_read":{"type":"date"},"time_favorited":{"type":"date"},"sort_id":{"type":"integer"},"resolved_title":{"type":"text"},"resolved_url":{"type":"text"},"excerpt":{"type":"text"},"is_article":{"type":"integer"},"is_index":{"type":"integer"},"has_image":{"type":"integer"},"word_count":{"type":"integer"},"lang":{"type":"text"},"time_to_read":{"type":"integer"},"top_image_url":{"type":"text"},"image":{"properties":{"item_id":{"type":"text"},"src":{"type":"text"},"width":{"type":"integer"},"height":{"type":"integer"}}}}}}}' 'http://192.168.1.100:9200/pocket'
 
- curl -X PUT -H "Content-Type:application/json" -d '{"mappings":{"properties":{"item_id":{"type":"text"},"resolved_id":{"type":"text"},"given_url":{"type":"text"},"given_title":{"type":"text"},"favorite":{"type":"integer"},"status":{"type":"integer"},"time_added":{"type":"date"},"time_updated":{"type":"date"},"time_read":{"type":"date"},"time_favorited":{"type":"date"},"sort_id":{"type":"integer"},"resolved_title":{"type":"text"},"resolved_url":{"type":"text"},"excerpt":{"type":"text"},"is_article":{"type":"integer"},"is_index":{"type":"integer"},"has_video":{"type":"integer"},"has_image":{"type":"integer"},"word_count":{"type":"integer"},"lang":{"type":"text"},"time_to_read":{"type":"integer"},"top_image_url":{"type":"text"},"authors":{"type":"nested"},"image":{"properties":{"item_id":{"type":"text"},"src":{"type":"text"},"width":{"type":"integer"},"height":{"type":"integer"}}},"images":{"type":"nested"},"videos":{"type":"nested"},"tags":{"type":"nested"},"listen_duration_estimate":{"type":"integer"}}}}}' 'http://192.168.1.100:9200/pocket'
+Respose:
+
+{"acknowledged":true,"shards_acknowledged":true,"index":"pocket"}
+
 
 
 // Pipe input ---> jq (-S to sort keys, -c to compact) ---> filenaame_of_input
@@ -43,13 +47,13 @@
       "excerpt":        { "type": "text" },
       "is_article":     { "type": "integer" },
       "is_index":       { "type": "integer" },
-      "has_video":      { "type": "integer" },
+//       "has_video":      { "type": "integer" },
       "has_image":      { "type": "integer" },
       "word_count":     { "type": "integer" },
       "lang":           { "type": "text" },
       "time_to_read":   { "type": "integer" },
       "top_image_url":  { "type": "text" },
-      "authors":        { "type": "nested" },
+
       "image": {
         "properties": {
           "item_id":    { "type": "text" },
@@ -58,10 +62,11 @@
           "height":     { "type": "integer" }
         }
       },
-      "images":         { "type": "nested" },
-      "videos":         { "type": "nested" },
-      "tags":           { "type": "nested" },
-      "listen_duration_estimate":     { "type": "integer" }
+//       "authors":        { "type": "nested" },
+//      "images":         { "type": "nested" },
+//      "videos":         { "type": "nested" },
+//      "tags":           { "type": "nested" },
+//      "listen_duration_estimate":     { "type": "integer" }
     }
 }
 
@@ -117,51 +122,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
 {
   "mapping": {
     "properties": {
-      "authors": {
-        "type": "nested",
-        "properties": {
-          "2483193": {
-            "properties": {
-              "author_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "item_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "name": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "url": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "excerpt": {
         "type": "text"
       },
@@ -175,9 +135,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
         "type": "text"
       },
       "has_image": {
-        "type": "integer"
-      },
-      "has_video": {
         "type": "integer"
       },
       "image": {
@@ -196,145 +153,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
           }
         }
       },
-      "images": {
-        "type": "nested",
-        "properties": {
-          "1": {
-            "properties": {
-              "caption": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "credit": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "height": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "image_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "item_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "src": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "width": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              }
-            }
-          },
-          "2": {
-            "properties": {
-              "caption": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "credit": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "height": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "image_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "item_id": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "src": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              },
-              "width": {
-                "type": "text",
-                "fields": {
-                  "keyword": {
-                    "type": "keyword",
-                    "ignore_above": 256
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
       "is_article": {
         "type": "integer"
       },
@@ -346,9 +164,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
       },
       "lang": {
         "type": "text"
-      },
-      "listen_duration_estimate": {
-        "type": "integer"
       },
       "resolved_id": {
         "type": "text"
@@ -364,9 +179,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
       },
       "status": {
         "type": "integer"
-      },
-      "tags": {
-        "type": "nested"
       },
       "time_added": {
         "type": "date"
@@ -385,9 +197,6 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
       },
       "top_image_url": {
         "type": "text"
-      },
-      "videos": {
-        "type": "nested"
       },
       "word_count": {
         "type": "integer"
