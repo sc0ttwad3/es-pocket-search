@@ -1,0 +1,916 @@
+{
+  "complete": 1,
+  "error": null,
+  "list": {
+    "177796471": {
+      "authors": {
+        "3536002": {
+          "author_id": "3536002",
+          "item_id": "177796471",
+          "name": "Jakub Chodounský",
+          "url": "http://www.chodounsky.net/author/admin/"
+        }
+      },
+      "excerpt": "Today I released the version 1.1.0.0 of Bonobo Git Server for Windows. This version contains some new nice features that should make your git repository management more easier and fixes some essential bugs and errors. For the whole log of changes…",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://chodounsky.net/",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "1",
+      "item_id": "177796471",
+      "lang": "",
+      "listen_duration_estimate": 82,
+      "resolved_id": "177796471",
+      "resolved_title": "chodounsky.net",
+      "resolved_url": "http://www.chodounsky.net/",
+      "sort_id": 7,
+      "status": "0",
+      "time_added": "1364859494",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364872637",
+      "word_count": "211"
+    },
+    "238808563": {
+      "excerpt": "“MVC” stands for “Model-View-Controller”, which is a well-defined design pattern used to create, in this instance, web applications. The goal of MVC is to separate concerns across the application for better scalability, extensibility, and testability. ASP.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://webdev.simple-talk.com/",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "0",
+        "item_id": "238808563",
+        "src": "http://i2.wp.com/webdev.simple-talk.com/wp-content/uploads/2012/11/NewContributor.gif",
+        "width": "0"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "0",
+          "image_id": "1",
+          "item_id": "238808563",
+          "src": "http://i2.wp.com/webdev.simple-talk.com/wp-content/uploads/2012/11/NewContributor.gif",
+          "width": "0"
+        }
+      },
+      "is_article": "0",
+      "is_index": "1",
+      "item_id": "238808563",
+      "lang": "",
+      "listen_duration_estimate": 171,
+      "resolved_id": "238808563",
+      "resolved_title": "For web developers, by web developers.",
+      "resolved_url": "http://webdev.simple-talk.com/",
+      "sort_id": 11,
+      "status": "0",
+      "time_added": "1364859960",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364860081",
+      "word_count": "442"
+    },
+    "298034495": {
+      "authors": {
+        "7382898": {
+          "author_id": "7382898",
+          "item_id": "298034495",
+          "name": "Joseph Zimmerman",
+          "url": "http://coding.smashingmagazine.com/author/joseph-zimmerman/?rel=author"
+        }
+      },
+      "excerpt": "Backbone.js is quickly becoming the most popular framework for building modular client-side JavaScript applications. This is largely due to its low barrier to entry; getting started with it is super-simple. However, unlike Ember.",
+      "favorite": "0",
+      "given_title": "A Thorough Introduction To Backbone.Marionette (Part 1) | Smashing Coding",
+      "given_url": "http://coding.smashingmagazine.com/2013/02/11/introduction-backbone-marionette/",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "298034495",
+      "lang": "",
+      "listen_duration_estimate": 609,
+      "resolved_id": "298034495",
+      "resolved_title": "Application — A Thorough Introduction To Backbone.Marionette (Part 1)",
+      "resolved_url": "http://coding.smashingmagazine.com/2013/02/11/introduction-backbone-marionette/",
+      "sort_id": 13,
+      "status": "0",
+      "time_added": "1364937479",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1366936466",
+      "word_count": "1573"
+    },
+    "319540134": {
+      "domain_metadata": {
+        "greyscale_logo": "https://logo.clearbit.com/theverge.com?size=800&greyscale=true",
+        "logo": "https://logo.clearbit.com/theverge.com?size=800",
+        "name": "The Verge"
+      },
+      "excerpt": "",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://mobile.theverge.com/2013/3/19/4119006/the-best-google-reader-alternatives",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "0",
+      "item_id": "319540134",
+      "lang": "",
+      "listen_duration_estimate": 0,
+      "resolved_id": "319537237",
+      "resolved_title": "",
+      "resolved_url": "https://www.theverge.com/2013/3/19/4119006/the-best-google-reader-alternatives",
+      "sort_id": 10,
+      "status": "0",
+      "time_added": "1364859897",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364872628",
+      "word_count": "0"
+    },
+    "319636508": {
+      "excerpt": "Content Injector lets you build smarter Views, Partial Views, and Html Helpers which dictate the scripts and style sheets they need. They can safely inject content into the page in areas already rendered, such as the <head> tag, where style sheets and some scripts should be located.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://weblogs.asp.net/peterblum/archive/2013/03/19/content-injector-for-asp-net-mvc.aspx",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "319636508",
+      "lang": "",
+      "listen_duration_estimate": 450,
+      "resolved_id": "319636508",
+      "resolved_title": "\"Peter and the case of the ASP.NET developer\"",
+      "resolved_url": "http://weblogs.asp.net/peterblum/archive/2013/03/19/content-injector-for-asp-net-mvc.aspx",
+      "sort_id": 12,
+      "status": "0",
+      "time_added": "1364859987",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364872255",
+      "word_count": "1162"
+    },
+    "323089560": {
+      "excerpt": "SVG Patterns Gallery Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Try this Why SVG? SVG images are typically smaller than bitmap images and remain sharp on high-dpi screens.",
+      "favorite": "0",
+      "given_title": "SVG Patterns Gallery",
+      "given_url": "http://philbit.com/svgpatterns/",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "1",
+      "item_id": "323089560",
+      "lang": "",
+      "listen_duration_estimate": 43,
+      "resolved_id": "323089560",
+      "resolved_title": "SVG Patterns Gallery",
+      "resolved_url": "http://philbit.com/svgpatterns/",
+      "sort_id": 18,
+      "status": "0",
+      "time_added": "1364937960",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364937960",
+      "word_count": "110"
+    },
+    "323752906": {
+      "authors": {
+        "53506006": {
+          "author_id": "53506006",
+          "item_id": "323752906",
+          "name": "Denise Jacobs",
+          "url": "https://www.sitepoint.com/author/djacobs/"
+        }
+      },
+      "domain_metadata": {
+        "greyscale_logo": "https://logo.clearbit.com/sitepoint.com?size=800&greyscale=true",
+        "logo": "https://logo.clearbit.com/sitepoint.com?size=800",
+        "name": "SitePoint"
+      },
+      "excerpt": "As you are well aware, the world of front-end development has evolved a lot over the past several years, as fresh minds have devised new approaches to solving age-old problems. Here are some of the latest best practices for front-end coding that will help your stylesheets and HTML considerably.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://www.sitepoint.com/css-architectures-new-best-practices/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+SitepointFeed+%28SitePoint+Feed%29",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "334",
+        "item_id": "323752906",
+        "src": "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/03/figure11.png",
+        "width": "382"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "334",
+          "image_id": "1",
+          "item_id": "323752906",
+          "src": "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/03/figure11.png",
+          "width": "382"
+        }
+      },
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "323752906",
+      "lang": "en",
+      "listen_duration_estimate": 788,
+      "resolved_id": "323752927",
+      "resolved_title": "CSS Architectures: New Best Practices",
+      "resolved_url": "https://www.sitepoint.com/css-architectures-new-best-practices/",
+      "sort_id": 0,
+      "status": "0",
+      "time_added": "1364858717",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 9,
+      "time_updated": "1364858718",
+      "top_image_url": "https://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.html-css.png",
+      "word_count": "2035"
+    },
+    "324353715": {
+      "excerpt": "If you work with JavaScript a lot then you know that there’s no shortage of script libraries being released. New scripts come out on a daily basis providing UI functionality, data binding support, form validation, framework functionality and more.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://weblogs.asp.net/dwahlin/archive/2013/03/27/getting-started-managing-client-side-data-with-the-breeze-javascript-library.aspx",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "441",
+        "item_id": "324353715",
+        "src": "https://aspblogs.blob.core.windows.net/media/dwahlin/Media/image_49C7ED8C.png",
+        "width": "725"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "441",
+          "image_id": "1",
+          "item_id": "324353715",
+          "src": "https://aspblogs.blob.core.windows.net/media/dwahlin/Media/image_49C7ED8C.png",
+          "width": "725"
+        },
+        "2": {
+          "caption": "",
+          "credit": "",
+          "height": "370",
+          "image_id": "2",
+          "item_id": "324353715",
+          "src": "https://aspblogs.blob.core.windows.net/media/dwahlin/Media/clip_image003_21490B78.png",
+          "width": "470"
+        },
+        "3": {
+          "caption": "",
+          "credit": "",
+          "height": "569",
+          "image_id": "3",
+          "item_id": "324353715",
+          "src": "https://aspblogs.blob.core.windows.net/media/dwahlin/Media/clip_image004_0774D549.png",
+          "width": "230"
+        }
+      },
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "324353715",
+      "lang": "en",
+      "listen_duration_estimate": 763,
+      "resolved_id": "324353715",
+      "resolved_title": "Getting Started Managing Client-Side Data with the Breeze JavaScript Library",
+      "resolved_url": "http://weblogs.asp.net/dwahlin/archive/2013/03/27/getting-started-managing-client-side-data-with-the-breeze-javascript-library.aspx",
+      "sort_id": 2,
+      "status": "0",
+      "time_added": "1364858803",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 9,
+      "time_updated": "1364858804",
+      "top_image_url": "https://aspblogs.blob.core.windows.net/media/dwahlin/Media/DanHeadShotBlog.jpg",
+      "word_count": "1972"
+    },
+    "324502429": {
+      "authors": {
+        "6206665": {
+          "author_id": "6206665",
+          "item_id": "324502429",
+          "name": "Greg Duncan",
+          "url": "https://channel9.msdn.com/Niners/gduncan411"
+        }
+      },
+      "excerpt": "Today's framework project of the week by Sandro Magi is one one of those kitchen sink, someone solving his real world problems, yet taking the time to clean it up, wrap it up and share his work and experience with you and me framework.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://channel9.msdn.com/coding4fun/blog/Say-Sasa-Think-Big-collection-of-Net-extensions-functions-methods-and-such",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "324502429",
+      "lang": "",
+      "listen_duration_estimate": 113,
+      "resolved_id": "324502429",
+      "resolved_title": "Say Sasa! (Think \"Big collection of .Net extensions, functions, methods and such\")",
+      "resolved_url": "https://channel9.msdn.com/coding4fun/blog/Say-Sasa-Think-Big-collection-of-Net-extensions-functions-methods-and-such",
+      "sort_id": 5,
+      "status": "0",
+      "time_added": "1364858892",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364858893",
+      "top_image_url": "https://f.ch9.ms/thumbnail/d7ddf9b3-b91b-45de-bedb-db8db2aa3611.png",
+      "word_count": "293"
+    },
+    "324828967": {
+      "authors": {
+        "2474906": {
+          "author_id": "2474906",
+          "item_id": "324828967",
+          "name": "Jon Galloway",
+          "url": "http://weblogs.asp.net/members/Jon-Galloway.aspx"
+        }
+      },
+      "excerpt": "Back in 2008 I had a blog series going where I did occasional blog post / news recaps with lists of interesting things. (Fun note: I ran that using ma.gnolia.com and stopped around the same time, but not necessarily because, they bit the dust.).",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://weblogs.asp.net/jgalloway/archive/2013/03/27/interesting-things-circa-march-2013.aspx?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+jongalloway+%28Jon+Galloway%29",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "324828967",
+      "lang": "",
+      "listen_duration_estimate": 183,
+      "resolved_id": "324828976",
+      "resolved_title": "Interesting Things Circa March 2013",
+      "resolved_url": "http://weblogs.asp.net/jgalloway/archive/2013/03/27/interesting-things-circa-march-2013.aspx",
+      "sort_id": 9,
+      "status": "0",
+      "time_added": "1364859698",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1365013264",
+      "word_count": "472"
+    },
+    "325098278": {
+      "authors": {
+        "53835679": {
+          "author_id": "53835679",
+          "item_id": "325098278",
+          "name": "Alex Fedorov",
+          "url": "https://www.smashingmagazine.com/author/alex-fedorov/?rel=author"
+        }
+      },
+      "excerpt": "As UI designers, we’re always interested in learning, reading user research, understanding best practices and keeping up to date on all the latest approaches and tactics for building websites and applications.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://uxdesign.smashingmagazine.com/2013/03/28/mastering-real-world-constraints/",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "326",
+        "item_id": "325098278",
+        "src": "https://www.smashingmagazine.com/wp-content/uploads/2013/01/Article-Image-1.png",
+        "width": "500"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "326",
+          "image_id": "1",
+          "item_id": "325098278",
+          "src": "https://www.smashingmagazine.com/wp-content/uploads/2013/01/Article-Image-1.png",
+          "width": "500"
+        },
+        "2": {
+          "caption": "",
+          "credit": "",
+          "height": "326",
+          "image_id": "2",
+          "item_id": "325098278",
+          "src": "https://www.smashingmagazine.com/wp-content/uploads/2013/01/Article-Image-2.png",
+          "width": "500"
+        },
+        "3": {
+          "caption": "",
+          "credit": "",
+          "height": "326",
+          "image_id": "3",
+          "item_id": "325098278",
+          "src": "https://www.smashingmagazine.com/wp-content/uploads/2013/01/Article-Image-3.png",
+          "width": "500"
+        },
+        "4": {
+          "caption": "The contact section was simplified to remove duplicate elements.",
+          "credit": "",
+          "height": "326",
+          "image_id": "4",
+          "item_id": "325098278",
+          "src": "https://www.smashingmagazine.com/wp-content/uploads/2013/01/Article-Image-4.png",
+          "width": "500"
+        }
+      },
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "325098278",
+      "lang": "en",
+      "listen_duration_estimate": 632,
+      "resolved_id": "325098278",
+      "resolved_title": "Mastering Real-World Constraints (A Case Study) – Smashing Magazine",
+      "resolved_url": "http://uxdesign.smashingmagazine.com/2013/03/28/mastering-real-world-constraints/",
+      "sort_id": 6,
+      "status": "0",
+      "time_added": "1364859008",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 7,
+      "time_updated": "1364859009",
+      "word_count": "1632"
+    },
+    "325103887": {
+      "authors": {
+        "2567595": {
+          "author_id": "2567595",
+          "item_id": "325103887",
+          "name": "Suprotim Agarwal",
+          "url": "http://www.dotnetcurry.com/Author.aspx?AuthorName=Suprotim%20Agarwal"
+        }
+      },
+      "excerpt": "Way back in early 2012, Sumit Maitra had given a fantastic tour of Visual Studio 11 - Awesome New Features for Web Developers (as Visual Studio 2012 was then called). There we had seen introduction to features like",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://www.dotnetcurry.com/ShowArticle.aspx?ID=874",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "296",
+        "item_id": "325103887",
+        "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/color-theme-picker.png",
+        "width": "624"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "296",
+          "image_id": "1",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/color-theme-picker.png",
+          "width": "624"
+        },
+        "10": {
+          "caption": "",
+          "credit": "",
+          "height": "390",
+          "image_id": "10",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/page-inspector-inspect.png",
+          "width": "624"
+        },
+        "11": {
+          "caption": "",
+          "credit": "",
+          "height": "284",
+          "image_id": "11",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/page-inspector-css-file.png",
+          "width": "530"
+        },
+        "12": {
+          "caption": "",
+          "credit": "",
+          "height": "616",
+          "image_id": "12",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/css-editor-color-picker.png",
+          "width": "624"
+        },
+        "13": {
+          "caption": "",
+          "credit": "",
+          "height": "320",
+          "image_id": "13",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/css-editor-color-updates.png",
+          "width": "624"
+        },
+        "14": {
+          "caption": "",
+          "credit": "",
+          "height": "409",
+          "image_id": "14",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/hierarchyical-tabbing.png",
+          "width": "300"
+        },
+        "15": {
+          "caption": "",
+          "credit": "",
+          "height": "384",
+          "image_id": "15",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/region-declaration.png",
+          "width": "393"
+        },
+        "16": {
+          "caption": "",
+          "credit": "",
+          "height": "90",
+          "image_id": "16",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/region-collapsed.png",
+          "width": "384"
+        },
+        "17": {
+          "caption": "",
+          "credit": "",
+          "height": "204",
+          "image_id": "17",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/vendor-specific-attribs.png",
+          "width": "195"
+        },
+        "18": {
+          "caption": "",
+          "credit": "",
+          "height": "133",
+          "image_id": "18",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/missing-vendor-attrib-wrning.png",
+          "width": "624"
+        },
+        "19": {
+          "caption": "",
+          "credit": "",
+          "height": "197",
+          "image_id": "19",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/js-autocomplete.png",
+          "width": "348"
+        },
+        "2": {
+          "caption": "",
+          "credit": "",
+          "height": "324",
+          "image_id": "2",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/spa-templates.png",
+          "width": "468"
+        },
+        "20": {
+          "caption": "",
+          "credit": "",
+          "height": "158",
+          "image_id": "20",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/references-js.png",
+          "width": "360"
+        },
+        "21": {
+          "caption": "",
+          "credit": "",
+          "height": "432",
+          "image_id": "21",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/inteisense-js.png",
+          "width": "370"
+        },
+        "3": {
+          "caption": "",
+          "credit": "",
+          "height": "324",
+          "image_id": "3",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/spa-login-page.png",
+          "width": "376"
+        },
+        "4": {
+          "caption": "",
+          "credit": "",
+          "height": "365",
+          "image_id": "4",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/spa-note-page.png",
+          "width": "438"
+        },
+        "5": {
+          "caption": "",
+          "credit": "",
+          "height": "454",
+          "image_id": "5",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/controllers.png",
+          "width": "294"
+        },
+        "6": {
+          "caption": "",
+          "credit": "",
+          "height": "228",
+          "image_id": "6",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/views.png",
+          "width": "181"
+        },
+        "7": {
+          "caption": "",
+          "credit": "",
+          "height": "475",
+          "image_id": "7",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/tag-correction.png",
+          "width": "624"
+        },
+        "8": {
+          "caption": "",
+          "credit": "",
+          "height": "260",
+          "image_id": "8",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/html5-auto-complete.png",
+          "width": "337"
+        },
+        "9": {
+          "caption": "",
+          "credit": "",
+          "height": "227",
+          "image_id": "9",
+          "item_id": "325103887",
+          "src": "http://www.dotnetcurry.com/images/visualstudio/1d21088c1e42_A2E9/multi-browser.png",
+          "width": "516"
+        }
+      },
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "325103887",
+      "lang": "",
+      "listen_duration_estimate": 681,
+      "resolved_id": "325103887",
+      "resolved_title": "Enhancements for the ASP.NET Web Developer in Visual Studio 2012 (Web Tools Update 2012.2)",
+      "resolved_url": "http://www.dotnetcurry.com/ShowArticle.aspx?ID=874",
+      "sort_id": 4,
+      "status": "0",
+      "time_added": "1364858848",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364875578",
+      "word_count": "1759"
+    },
+    "325278397": {
+      "authors": {
+        "42422146": {
+          "author_id": "42422146",
+          "item_id": "325278397",
+          "name": "Niels Matthijs",
+          "url": "https://dzone.com/users/282485/niels_matthijs.html"
+        }
+      },
+      "excerpt": "Even though css has been getting a lot of love the past few years (with plenty of animation options, overall visual effects and more granular targeting controls added to the spec), positioning elements remains a big weak spot of css.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://css.dzone.com/articles/relative-css-positioning?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+zones%2Fcss+%28CSS+Zone%29",
+      "has_image": "1",
+      "has_video": "0",
+      "image": {
+        "height": "0",
+        "item_id": "325278397",
+        "src": "http://www.onderhond.com/style/site/css-positioning.jpg",
+        "width": "0"
+      },
+      "images": {
+        "1": {
+          "caption": "",
+          "credit": "",
+          "height": "0",
+          "image_id": "1",
+          "item_id": "325278397",
+          "src": "http://www.onderhond.com/style/site/css-positioning.jpg",
+          "width": "0"
+        }
+      },
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "325278397",
+      "lang": "",
+      "listen_duration_estimate": 261,
+      "resolved_id": "325123424",
+      "resolved_title": "Relative CSS Positioning: Parent vs. Self",
+      "resolved_url": "http://css.dzone.com/articles/relative-css-positioning",
+      "sort_id": 3,
+      "status": "0",
+      "time_added": "1364858819",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1365014077",
+      "top_image_url": "https://dzone.com/themes/dz20/images/ArticleImg_6.jpg",
+      "word_count": "675"
+    },
+    "325344783": {
+      "authors": {
+        "42425103": {
+          "author_id": "42425103",
+          "item_id": "325344783",
+          "name": "Alexander Beletsky",
+          "url": "https://dzone.com/users/781587/alexanderb.html"
+        }
+      },
+      "excerpt": "After initial introduction to Backbone's views and models, we're going to look on the next Backbone.js fundamental entity - Collection. Collections represents the ordered set of models and become very handy for any type of applications.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://architects.dzone.com/articles/baby-steps-backbonejs?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+zones%2Fcss+%28CSS+Zone%29",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "325344783",
+      "lang": "en",
+      "listen_duration_estimate": 473,
+      "resolved_id": "325011774",
+      "resolved_title": "Baby steps to Backbone.js: Exploring collections",
+      "resolved_url": "http://architects.dzone.com/articles/baby-steps-backbonejs",
+      "sort_id": 1,
+      "status": "0",
+      "time_added": "1364858781",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 6,
+      "time_updated": "1364858783",
+      "top_image_url": "https://dzone.com/themes/dz20/images/ArticleImg_10.jpg",
+      "word_count": "1221"
+    },
+    "327380636": {
+      "authors": {
+        "17451644": {
+          "author_id": "17451644",
+          "item_id": "327380636",
+          "name": "Alex R. Young",
+          "url": ""
+        }
+      },
+      "excerpt": "Node 0.10 is the latest stable branch of Node. It's the branch you should be using for Real Work™. The most significant API changes can be found in the stream module. This is a quick guide to streams2 to get you up to speed.",
+      "favorite": "0",
+      "given_title": "Five Minute Guide to Streams2",
+      "given_url": "http://feedproxy.google.com/~r/dailyjs/~3/yPI46cdrVug/streams-streams-streams",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "327380636",
+      "lang": "en",
+      "listen_duration_estimate": 293,
+      "resolved_id": "327361683",
+      "resolved_title": "Five Minute Guide to Streams2",
+      "resolved_url": "http://dailyjs.com/2013/04/01/streams-streams-streams/",
+      "sort_id": 19,
+      "status": "0",
+      "time_added": "1364937977",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 3,
+      "time_updated": "1364937977",
+      "word_count": "756"
+    },
+    "327970174": {
+      "authors": {
+        "7382898": {
+          "author_id": "7382898",
+          "item_id": "327970174",
+          "name": "Joseph Zimmerman",
+          "url": "http://coding.smashingmagazine.com/author/joseph-zimmerman/?rel=author"
+        }
+      },
+      "excerpt": "In the first part of this series, we discussed Backbone.Marionette’s Application. This time around, we’ll discuss the module system that is included in Backbone.Marionette.",
+      "favorite": "0",
+      "given_title": "A Thorough Introduction To Backbone.Marionette (Part 2)",
+      "given_url": "http://coding.smashingmagazine.com/2013/04/02/thorough-introduction-backbone-marionette-part-2-modules/",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "327970174",
+      "lang": "en",
+      "listen_duration_estimate": 1193,
+      "resolved_id": "327970174",
+      "resolved_title": "Modules — A Thorough Introduction To Backbone.Marionette (Part 2)",
+      "resolved_url": "http://coding.smashingmagazine.com/2013/04/02/thorough-introduction-backbone-marionette-part-2-modules/",
+      "sort_id": 14,
+      "status": "0",
+      "time_added": "1364937492",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 14,
+      "time_updated": "1365013228",
+      "word_count": "3081"
+    },
+    "328278442": {
+      "excerpt": "",
+      "favorite": "0",
+      "given_title": "jQuery Roundup: Sidr, Huey, Backbone.Advice",
+      "given_url": "http://feedproxy.google.com/~r/dailyjs/~3/lcCMifVp3Pg/jquery-roundup",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "0",
+      "item_id": "328278442",
+      "lang": "",
+      "listen_duration_estimate": 0,
+      "resolved_id": "328243971",
+      "resolved_title": "",
+      "resolved_url": "http://dailyjs.com/2013/04/02/jquery-roundup/",
+      "sort_id": 17,
+      "status": "0",
+      "time_added": "1364937902",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364937902",
+      "word_count": "0"
+    },
+    "328313639": {
+      "authors": {
+        "10548819": {
+          "author_id": "10548819",
+          "item_id": "328313639",
+          "name": "Ben Nadel",
+          "url": "https://plus.google.com/108976367067760160494?rel=author"
+        }
+      },
+      "excerpt": "The other day, I was watching one of the Test Driven Development (TDD) episodes in the Clean Coder video series by Robert C. Martin. In the episode, Robert Martin (aka Uncle Bob) was using the Red-Green-Refactor approach to refactoring some HTML formatter class.",
+      "favorite": "0",
+      "given_title": "Stateless Service Singletons vs. Stateful Service Entities",
+      "given_url": "http://www.bennadel.com/blog/2466-Stateless-Service-Singletons-vs-Stateful-Service-Entities.htm",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "1",
+      "is_index": "0",
+      "item_id": "328313639",
+      "lang": "en",
+      "listen_duration_estimate": 183,
+      "resolved_id": "328313639",
+      "resolved_title": "Stateless Service Singletons vs. Stateful Service Entities",
+      "resolved_url": "http://www.bennadel.com/blog/2466-Stateless-Service-Singletons-vs-Stateful-Service-Entities.htm",
+      "sort_id": 15,
+      "status": "0",
+      "time_added": "1364937738",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364937739",
+      "word_count": "474"
+    },
+    "346879": {
+      "excerpt": "Until you upgrade you will have to take our word for it when we say that over the last few years we've made a reputation for building websites that look great and are easy-to-use.  Founded in 2006, Buffalo is a small web design & development agency based in Brighton, UK.",
+      "favorite": "0",
+      "given_title": "Buffalo - Web Development, E-Commerce & Web Design - Brighton UK",
+      "given_url": "http://builtbybuffalo.com/",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "1",
+      "item_id": "346879",
+      "lang": "en",
+      "listen_duration_estimate": 119,
+      "resolved_id": "346879",
+      "resolved_title": "Buffalo - Web Development, E-Commerce & Web Design - Brighton UK",
+      "resolved_url": "http://builtbybuffalo.com/",
+      "sort_id": 16,
+      "status": "0",
+      "time_added": "1364937866",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_updated": "1364937866",
+      "word_count": "308"
+    },
+    "383014": {
+      "excerpt": "Javascript Madness Intro JavaScript Madness: Keyboard Events Jan Wolter Note: I have stopped updating this page.",
+      "favorite": "0",
+      "given_title": "",
+      "given_url": "http://unixpapa.com/js/key.html",
+      "has_image": "0",
+      "has_video": "0",
+      "is_article": "0",
+      "is_index": "0",
+      "item_id": "383014",
+      "lang": "en",
+      "listen_duration_estimate": 2155,
+      "resolved_id": "383014",
+      "resolved_title": "JavaScript Madness: Keyboard Events",
+      "resolved_url": "http://unixpapa.com/js/key.html",
+      "sort_id": 8,
+      "status": "0",
+      "time_added": "1364859543",
+      "time_favorited": "0",
+      "time_read": "0",
+      "time_to_read": 25,
+      "time_updated": "1365013238",
+      "word_count": "5567"
+    }
+  },
+  "search_meta": {
+    "search_type": "normal"
+  },
+  "since": 1561425788,
+  "status": 1
+}

@@ -10,7 +10,6 @@ scratch
 .vscode
 .env
 *.log
-docs/
 
 yarn.lock
 
