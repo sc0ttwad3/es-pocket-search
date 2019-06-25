@@ -1,30 +1,30 @@
 const chalk = require('chalk');
-const { checkEsConnection, client } = require('./es-connection');
-const { dd, du } = require('dumper');
-const fastify = require('fastify')({ logger: false });
+const {checkEsConnection, client, createIndexWithMappings} = require('./es-connection');
+const {dd, du} = require('dumper');
+const fastify = require('fastify')({logger: false});
 require('dotenv').config();
 
 const port = process.env.PORT || 8888;
-const mode = process.env.NODE_ENV || "unspecified";
+const mode = process.env.NODE_ENV || 'unspecified';
 
 // Routing
 // --------------------------------------------------
 
- /** HOME PAGE */
+/** HOME PAGE */
 fastify.route({
   method: 'GET',
   url: '/',
   schema: {
     // request needs to have a querystring with a `name` parameter
- //   querystring: {
- //     name: { type: 'string' }
- //   },
+    //   querystring: {
+    //     name: { type: 'string' }
+    //   },
     // the response needs to be an object with an `hello` property of type 'string'
     response: {
       200: {
         type: 'object',
         properties: {
-          hello: { type: 'string' }
+          hello: {type: 'string'}
         }
       }
     }
@@ -34,7 +34,7 @@ fastify.route({
     // E.g. check authentication
   },
   handler: async (request, reply) => {
-    return { hello: 'world' }
+    return {hello: 'world'};
   }
 });
 
@@ -43,7 +43,7 @@ fastify.route({
   method: 'GET',
   url: '/pocket',
   handler: async (request, reply) => {
-    return { this_is: 'pocket' }
+    return {this_is: 'pocket'};
   }
 });
 
@@ -52,7 +52,7 @@ fastify.route({
   method: 'GET',
   url: '/login',
   handler: async (request, reply) => {
-    return { this_is: 'login' }
+    return {this_is: 'login'};
   }
 });
 
@@ -61,7 +61,7 @@ fastify.route({
   method: 'GET',
   url: '/logout',
   handler: async (request, reply) => {
-    return { this_is: 'logout' }
+    return {this_is: 'logout'};
   }
 });
 
@@ -70,7 +70,7 @@ fastify.route({
   method: 'GET',
   url: '/redirect',
   handler: async (request, reply) => {
-    return { this_is: 'redirect' }
+    return {this_is: 'redirect'};
   }
 });
 
@@ -78,7 +78,7 @@ fastify.route({
 // --------------------------------------------------
 const start = async () => {
   try {
-    await fastify.listen(port)
+    await fastify.listen(port);
     //fastify.log.info(`server listening on ${fastify.server.address().port}`);;
     console.log(chalk.green(`[ ✓ ] server in ${mode} mode listening on ${fastify.server.address().port}`));
     console.log(chalk.greenBright('[Press CTRL-C to stop]'));
@@ -92,6 +92,9 @@ const start = async () => {
 if (process.env.NODE_ENV == 'development') {
   checkEsConnection();
 }
+
+// DOES NOT WORK
+//createIndexWithMappings();
 
 // Start the server!
 start();

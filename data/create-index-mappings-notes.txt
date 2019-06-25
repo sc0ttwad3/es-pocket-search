@@ -120,7 +120,7 @@ curl -XPOST "http://es01:9200/pocket/_doc/327970174" -H 'Content-Type: applicati
 ## Current mappings
 
 {
-  "mapping": {
+  "mappings": {
     "properties": {
       "excerpt": {
         "type": "text"
