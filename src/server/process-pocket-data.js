@@ -7,5 +7,4 @@ console.log(chalk.blueBright("Reading data..."));
 const items = fs.readJsonSync("./data/pocket-sorted-keys.json");
 const keys = items.keys;
 console.log(chalk.blueBright("done.\n"));
-console.log(chalk.blue(`Num of items: ${keys}`));
 dump(items);
