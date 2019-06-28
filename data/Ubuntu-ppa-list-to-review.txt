@@ -1,0 +1,285 @@
+ This repository contains collection of customized, updated, ported and backported
+packages for two last LTS releases and latest pre-LTS release.
+Packages for older releases relocated to ppa:eugenesan/archive or deleted.
+
++-------------------------------------------------------------------------------------+
+| Disclaimer:
++-------------------------------------------------------------------------------------+
+* Packages in this a nd related PPAs are for personal use only.
+  They developed specifically for several custom environments and may not work for you.
+* Usage of packages in this PPA, in some forms, might contradict licenses of software
+  packaged in this and related PPAs. End users and administrator are responsible for
+  runtime licensing and possible legal consequences.
+* Some packages provided with their dependencies while some might require additional
+  Ubuntu repositories and external PPAs. Below is the list of
+
++-------------------------------------------------------------------------------------+
+| To add this repository, to your Ubuntu installation, invoke:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:eugenesan/ppa
+
++-------------------------------------------------------------------------------------+
+| To access experimental packages before they enter main PPA, invoke:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:eugenesan/boiler
+
++-------------------------------------------------------------------------------------+
+| To access archived/outdated packages, invoke:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:eugenesan/archive
+
++-------------------------------------------------------------------------------------+
+| Packages are maintained for 2 latest LTSs, latest release and upcomming releases:
+|            Name       | Precise | Trusty | Saucy | Utopic |     Comments
++-------------------------------------------------------------------------------------+
+acroread-fonts-xtd           +        -        -        -
+aget                         +        -        -        -
+audio-recorder               +        -        -        -
+autossh                      +        +        +        -
+bcmwl                        +        +        +        -
+bfgminer                     -        +        -        -
+bitcoin                      -        +        -        -
+btsync                       +        +        +        -
+bup                          +        +        +        -
+caffeine                     +        +        -        -     Inhabitant indicator
+cardapio                     -        +        -        -
+cdcat                        +        -        -        -
+codelite                     +        +        -        -     Programmer's IDE
+ctorrent                     +        +        +        -
+dialog                       +        +        -        -
+dispad                       +        -        -        -
+exfat                        +        +        +        -
+fuse-adbfs                   +        -        -        -
+fusecompress                 +        -        -        -
+gnome-window-applets         +        +        +        +
+gwoffice                     +        -        -        -
+handbrake                    +        -        -        -
+indicator-sensors            +        +        -        -
+launchpad-getkeys            +        -        -        -
+lib7zip                      +        -        -        -
+libapache2-mod-auth-timeout  +        -        -        -
+libmediainfo                 +        -        -        -
+libmtp                       +        -        -        -
+libvdpau                     +        -        -        -
+libzen                       +        -        -        -
+lsyncd                       +        +        -        -      Resident synchronizer using Rsync
+macfanctld                   -        +        -        -
+mc                           +        +        +        -      Midnight Commander
+mdadm                        +        -        -        -
+mtpfs                        +        -        -        -
+nuitka                       +        +        +        -      Python to C++ compiler
+nxclient                     +        +        -        -
+nxnode                       +        +        -        -
+nxserver                     +        +        -        -
+pianobar                     +        -        -        -
+pica-pica                    +        +        -        -
+rdiff-backup                 +        +        +        -
+reaver                       +        -        -        -
+s3ql                         +        +        -        -
+simple-mtpfs                 +        +        -        -
+skype-call-recorder          +        -        -        -
+skypetab-ng                  +        +        -        -
+
+smartgithg                   +        +        +        -      Git+Hg GUI
+sparkleshare                 +        +        +        -      Git based Sync client
+sslh                         +        -        -        -
+synergy                      +        +        +        -
+tinyxml2                     +        -        -        -
+truecrypt                    +        +        +        -
+unison                       +        +        -        -
+utouch-geis                  +        -        -        -
+whdd                         -        +        +        -
+wireshark                    +        -        -        -
+wxwidgets2.9                 +        +        -        -
+xserver-xorg-video-nestedv   +        -        -        -
+xserver-xorg-video-qxl       -        +        +        -
+zbackup                      +        +        +        -
+
++-------------------------------------------------------------------------------------+
+| Next package are kept for historical reasons and no more actively maintained:
++-------------------------------------------------------------------------------------+
+nginx (NginX)
+php (PHP: Hypertext Preprocessor)
+archfs (rdiff-backup as file system)
+asterisk
+kate (Kate from KDE3 with Kscope)
+opennx (OpenNX)
+neatx (Google NeatX)
+gm-notify (GMail indicator)
+googsystray (Google tray notifier)
+google-doc-fs (Google Docs/Drive as file system)
+transmission (Bittorrent client)
+transgui (Remote GUI for transmission)
+codeblocks  (Programmer's IDE)
+efax-gtk (GTK GUI for efax)
+audacity (Graphical swiss knife for audio)
+audacious (Originally WinAmp clone)
+grub2 (Boot Loader)
+git (DSC toolkit)
+icaterm (Citrix Client)
+lexmarkjet (Printer Drivers)
+komposer (Mozilla based HTML editor)
+meld (Graphical comparator)
+moon (Mono IDE)
+motion (Motion video detector/recorder)
+mydns (*SQL based DNS server)
+networkmanager (Networking Manager system)
+phc-intel (Tuned for power efficiency Kernel and Tools)
+ppa-purge
+radiotray
+sshguard (SSH Guard daemon, protects from bruteforce attacks)
+screen
+smartgit (Git GUI replaced by smartgithg)
+initramfs-tools
+pureftpd
+xplanetfx
+wxwidgets
+ubuntusunrise (Boot Splash Screen)
+startupmanager
+ttf-fixedsys-excelsior (Free clone of DOS fixed font),
+ttf-mscorefonts-installer (Extended MS fonts installer)
+
++-------------------------------------------------------------------------------------+
+| To prevent automatic installation of packages from specific repository, invoke:
++-------------------------------------------------------------------------------------+
+$ echo -e "Package: *\n\nPin: release o=LP-PPA-[USER]-[NAME]\nPin-Priority: -1\n\n" | sudo tee -a /etc/apt/preferences
+* Replace [USER] and [NAME] with corresponding values (for ex. ajf and trg) or replace   whole "LP-PPA-[USER]-[NAME]" string with "Origin" value from appropriate /var/lib/apt/lists/*_Release
+
++-------------------------------------------------------------------------------------+
+| From time to time maintenance of some packages in this repository might be stopped in
+| favor of better support by canonical team, official author or a friendly repository.
+| If you miss any package please check next repositories:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:nilarimogard/webupd8
+$ sudo add-apt-repository ppa:pi-rho/security      (Non root capturing: setcap cap_net_raw,cap_net_admin=eip /usr/bin/dumpcap)
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo add-apt-repository ppa:x2go/stable
+$ sudo add-apt-repository ppa:git-core/ppa
+$ sudo add-apt-repository ppa:jd-team/jdownloader
+$ sudo add-apt-repository ppa:ubuntu-wine/ppa
+$ sudo add-apt-repository ppa:zentyal/2.3
+$ sudo add-apt-repository ppa:fbirlik/kscope
+
++-------------------------------------------------------------------------------------+
+| PPAs below are listed for reference only.
+| Software from those packages was forked, obsoleted or just unused:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:ajf/trg
+$ sudo add-apt-repository ppa:caffeine-developers/caffeine-dev
+$ sudo add-apt-repository ppa:cardapio-team/cardapio-ppa
+$ sudo add-apt-repository ppa:colin-king/powermanagement
+$ sudo add-apt-repository ppa:jfi/ppa
+$ sudo add-apt-repository ppa:keithw/mosh
+$ sudo add-apt-repository ppa:keks9n/skypetab
+$ sudo add-apt-repository ppa:poliva/lightum-mba
+$ sudo add-apt-repository ppa:relan/exfat
+$ sudo add-apt-repository ppa:rye/ubuntuone-extras
+$ sudo add-apt-repository ppa:tualatrix/ppa
+$ sudo add-apt-repository ppa:xorg-edgers/ppa
+$ sudo add-apt-repository ppa:kde3-maintainers/trinity-svn-nightly
+$ sudo add-apt-repository ppa:kalon33/ppa
+$ sudo add-apt-repository ppa:nvidia-vdpau/ppa
+$ sudo add-apt-repository ppa:nvidia-vdpau/cutting-edge-multimedia
+
++-------------------------------------------------------------------------------------+
+| To be reviewed:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository ppa:alexmurray/indicator-sensors-daily
+$ sudo add-apt-repository ppa:broken/ppa
+$ sudo add-apt-repository ppa:caffeine-developers/caffeine-dev
+$ sudo add-apt-repository ppa:caffeine-developers/ppa
+$ sudo add-apt-repository ppa:dlech/keepass2-plugins
+$ sudo add-apt-repository ppa:dolik-rce/upp-nightly
+$ sudo add-apt-repository ppa:eugenesan/ppa
+$ sudo add-apt-repository ppa:faster3ck/converseen
+$ sudo add-apt-repository ppa:fbirlik/kscope
+$ sudo add-apt-repository ppa:fixnix/indicator-systemtray-unity
+$ sudo add-apt-repository ppa:freefilesync/ffs
+$ sudo add-apt-repository ppa:gencfsm/ppa
+$ sudo add-apt-repository ppa:git-core/ppa
+$ sudo add-apt-repository ppa:gnome3-team/gnome3-staging
+$ sudo add-apt-repository ppa:hsoft/ppa
+$ sudo add-apt-repository ppa:hunter-kaller/ppa
+$ sudo add-apt-repository ppa:indicator-multiload/daily
+$ sudo add-apt-repository ppa:indicator-multiload/stable-daily
+$ sudo add-apt-repository ppa:jd-team/jdownloader
+$ sudo add-apt-repository ppa:johnf-inodes/m3u8-segmenter
+$ sudo add-apt-repository ppa:jwigley/window-list
+$ sudo add-apt-repository ppa:keepassx/daily
+$ sudo add-apt-repository ppa:keithw/mosh
+$ sudo add-apt-repository ppa:kubuntu-ppa/experimental
+$ sudo add-apt-repository ppa:linrunner/tlp
+$ sudo add-apt-repository ppa:lubuntu-dev/lubuntu-daily
+$ sudo add-apt-repository ppa:mixxx/mixxx
+$ sudo add-apt-repository ppa:neon/kf5-snapshot-weekly
+$ sudo add-apt-repository ppa:nilarimogard/webupd8
+$ sudo add-apt-repository ppa:noobslab/indicators
+$ sudo add-apt-repository ppa:noobslab/themes
+$ sudo add-apt-repository ppa:paolorotolo/copy
+$ sudo add-apt-repository ppa:pinta-maintainers/pinta-stable
+$ sudo add-apt-repository ppa:pi-rho/security
+$ sudo add-apt-repository ppa:ravefinity-project/ppa
+$ sudo add-apt-repository ppa:razor-qt/ppa
+$ sudo add-apt-repository ppa:satyajit-happy/themes
+$ sudo add-apt-repository ppa:syncany/release
+$ sudo add-apt-repository ppa:teejee2008/ppa
+$ sudo add-apt-repository ppa:transmissionbt/ppa
+$ sudo add-apt-repository ppa:tuxpoldo/btsync
+$ sudo add-apt-repository ppa:ubuntu-mate-dev/ppa
+$ sudo add-apt-repository ppa:ubuntu-mate-dev/trusty-mate
+$ sudo add-apt-repository ppa:ubuntu-sdk-team/ppa
+$ sudo add-apt-repository ppa:ubuntu-wine/ppa
+$ sudo add-apt-repository ppa:unit3/bfgminer
+$ sudo add-apt-repository ppa:venerix/pkg
+$ sudo add-apt-repository ppa:videolan/stable-daily
+$ sudo add-apt-repository ppa:vovansrnd/coolreader
+$ sudo add-apt-repository ppa:webupd8team/gthumb
+$ sudo add-apt-repository ppa:webupd8team/java
+$ sudo add-apt-repository ppa:webupd8team/popcorntime
+$ sudo add-apt-repository ppa:webupd8team/themes
+$ sudo add-apt-repository ppa:webupd8team/tor-browser
+$ sudo add-apt-repository ppa:x2go/ppa
+$ sudo add-apt-repository ppa:x2go/stable
+$ sudo add-apt-repository ppa:yannubuntu/boot-repair
+$ sudo add-apt-repository ppa:ytvwld/syncthing
+
++-------------------------------------------------------------------------------------+
+| You also might be interested in package from next repositories:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository "deb http://dl.google.com/linux/deb/ stable main non-free"
+$ sudo add-apt-repository "deb http://dl.google.com/linux/chrome/deb/ stable main"
+$ sudo add-apt-repository "deb http://dl.google.com/linux/talkplugin/deb/ stable main"
+$ sudo add-apt-repository "deb http://dl.google.com/linux/musicmanager/deb/ stable main"
+$ sudo add-apt-repository "deb http://dl.google.com/linux/earth/deb/ stable main"
+$ sudo add-apt-repository "deb http://dl.google.com/linux/chrome-remote-desktop/deb/ stable main"
+$ sudo add-apt-repository "deb http://download.virtualbox.org/virtualbox/debian precise contrib"
+$ sudo add-apt-repository "deb http://download.webmin.com/download/repository sarge contrib"
+$ sudo add-apt-repository "deb http://repo.ajenti.org/ng/debian main main ubuntu"
+
++-------------------------------------------------------------------------------------+
+| Following repositories might be helpful during packages testing:
++-------------------------------------------------------------------------------------+
+$ sudo add-apt-repository "deb http://ddebs.ubuntu.com precise main restricted universe multiverse"
+$ sudo add-apt-repository "deb http://ddebs.ubuntu.com precise-updates main restricted universe multiverse"
+$ sudo add-apt-repository "deb http://ddebs.ubuntu.com precise-security main restricted universe multiverse"
+$ sudo add-apt-repository "deb http://ddebs.ubuntu.com precise-proposed main restricted universe multiverse"
+
++-------------------------------------------------------------------------------------+
+| Missing GPG keys might be fetched by running:
++-------------------------------------------------------------------------------------+
+$ wget -q https://dl-ssl.google.com/linux/linux_signing_key.pub -O- | sudo apt-key add -
+$ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | sudo apt-key add -
+$ wget -q http://www.webmin.com/jcameron-key.asc -O- | sudo apt-key add -
+$ wget -q http://repo.ajenti.org/debian/key -O- | sudo apt-key add -
+$ wget -q http://ddebs.ubuntu.com/dbgsym-release-key.asc -O- | sudo apt-key add -
+
++-------------------------------------------------------------------------------------+
+| ToDo:
++-------------------------------------------------------------------------------------+
+* Sync trusty -> utopic
+* Sort, Review and Archive un-maintained packages
+* Update gwoffice
+* Report bug on mdadm bug with 0.90 arrays on 2TB+0.90 on 64bit systems
+* Report HeandBreak on amd64
+ More info: https://launchpad.net/~eugenesan/+archive/ubuntu/ppa
+Press [ENTER] to continue or Ctrl-c to cancel adding it.
