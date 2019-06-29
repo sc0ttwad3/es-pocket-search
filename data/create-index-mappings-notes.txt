@@ -11,7 +11,7 @@ Respose:
 
 
 // Pipe input ---> jq (-S to sort keys, -c to compact) ---> filenaame_of_input
-|| jq '.list' -S
+|| jq .list -S
 
 ## Sample Document
 
