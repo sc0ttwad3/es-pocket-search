@@ -5,6 +5,5 @@ const _ = require("rambdax");
 
 console.log(chalk.blueBright("Reading data..."));
 const items = fs.readJsonSync("./data/pocket-sorted-keys.json");
-const keys = items.keys;
 console.log(chalk.blueBright("done.\n"));
 dump(items);
