@@ -8,8 +8,10 @@
 use strict;
 use warnings;
 use autodie;
-use v5.30;
+use v5.26;
 
+use Data::Dumper;
+use JSON::PP;
 use LWP::UserAgent;
 
 # Curl command for manual retrieval of
@@ -28,8 +30,12 @@ $req->content($json);
 my $ua  = LWP::UserAgent->new;
 my $res = $ua->request($req);
 
+my $articles;
+
 if ( $res->is_success ) {
-    print $res->decoded_content;
+    #print $res->decoded_content;
+    $articles = $res->decoded_content;
+    # print Dumper($articles);
 }
 else {
     print STDERR $res->status_line, "\n";
