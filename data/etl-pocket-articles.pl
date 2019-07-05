@@ -1,9 +1,9 @@
 #!/user/bin/env perl
 
-# Retrieve Pocket Items
+# Extract Pocket Items --> Transform with Perl --> Load into Elasticsearch
 #
 # author: <sc0ttwad3@gmail.com>
-# edited: 06.29.19
+# edited: 07.04.19
 #
 use strict;
 use warnings;
@@ -29,13 +29,15 @@ $req->content($json);
 
 my $ua  = LWP::UserAgent->new;
 my $res = $ua->request($req);
-
-my $articles;
+my %pocket_data_object;
 
 if ( $res->is_success ) {
-    $articles = $res->decoded_content;
-    print $articles;
+    %pocket_data_object = $res->decoded_content;
+    # debug to console
+    # print $articles;
 }
 else {
     print STDERR $res->status_line, "\n";
 }
+
+print my %ids = $pocket_data_object{"list"};

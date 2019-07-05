@@ -1,0 +1,90 @@
+{
+  "323752906": {
+    "item_id": "323752906",
+    "resolved_id": "323752927",
+    "given_url": "http://www.sitepoint.com/css-architectures-new-best-practices/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+SitepointFeed+%28SitePoint+Feed%29",
+    "given_title": "",
+    "favorite": "0",
+    "status": "0",
+    "time_added": "1364858717",
+    "time_updated": "1364858718",
+    "time_read": "0",
+    "time_favorited": "0",
+    "sort_id": 0,
+    "resolved_title": "CSS Architectures: New Best Practices",
+    "resolved_url": "https://www.sitepoint.com/css-architectures-new-best-practices/",
+    "excerpt": "As you are well aware, the world of front-end development has evolved a lot over the past several years, as fresh minds have devised new approaches to solving age-old problems. Here are some of the latest best practices for front-end coding that will help your stylesheets and HTML considerably.",
+    "is_article": "1",
+    "is_index": "0",
+    "has_video": "0",
+    "has_image": "1",
+    "word_count": "2035",
+    "lang": "en",
+    "time_to_read": 9,
+    "top_image_url": "https://www.sitepoint.com/wp-content/themes/sitepoint/assets/images/icon.html-css.png",
+    "authors": {
+      "53506006": {
+        "item_id": "323752906",
+        "author_id": "53506006",
+        "name": "Denise Jacobs",
+        "url": "https://www.sitepoint.com/author/djacobs/"
+      }
+    },
+    "image": {
+      "item_id": "323752906",
+      "src": "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/03/figure11.png",
+      "width": "382",
+      "height": "334"
+    },
+    "images": {
+      "1": {
+        "item_id": "323752906",
+        "image_id": "1",
+        "src": "https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2013/03/figure11.png",
+        "width": "382",
+        "height": "334",
+        "credit": "",
+        "caption": ""
+      }
+    },
+    "domain_metadata": {
+      "name": "SitePoint",
+      "logo": "https://logo.clearbit.com/sitepoint.com?size=800",
+      "greyscale_logo": "https://logo.clearbit.com/sitepoint.com?size=800&greyscale=true"
+    },
+    "listen_duration_estimate": 788
+  },
+  "325344783": {
+    "item_id": "325344783",
+    "resolved_id": "325011774",
+    "given_url": "http://architects.dzone.com/articles/baby-steps-backbonejs?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+zones%2Fcss+%28CSS+Zone%29",
+    "given_title": "",
+    "favorite": "0",
+    "status": "0",
+    "time_added": "1364858781",
+    "time_updated": "1364858783",
+    "time_read": "0",
+    "time_favorited": "0",
+    "sort_id": 1,
+    "resolved_title": "Baby steps to Backbone.js: Exploring collections",
+    "resolved_url": "http://architects.dzone.com/articles/baby-steps-backbonejs",
+    "excerpt": "After initial introduction to Backbone's views and models, we're going to look on the next Backbone.js fundamental entity - Collection. Collections represents the ordered set of models and become very handy for any type of applications.",
+    "is_article": "1",
+    "is_index": "0",
+    "has_video": "0",
+    "has_image": "0",
+    "word_count": "1221",
+    "lang": "en",
+    "time_to_read": 6,
+    "top_image_url": "https://dzone.com/themes/dz20/images/ArticleImg_10.jpg",
+    "authors": {
+      "42425103": {
+        "item_id": "325344783",
+        "author_id": "42425103",
+        "name": "Alexander Beletsky",
+        "url": "https://dzone.com/users/781587/alexanderb.html"
+      }
+    },
+    "listen_duration_estimate": 473
+  }
+}
