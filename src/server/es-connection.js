@@ -3,7 +3,12 @@ const {Client} = require("@elastic/elasticsearch");
 const dotenv = require("dotenv").config();
 
 const index = process.env.ES_INDEX;
-const client = new Client({node: process.env.ES_HOST});
+const client = new Client({
+  node: process.env.ES_HOST,
+  maxRetries: 5,
+  requestTimeout: 20000,
+  sniffOnStart: true
+});
 
 /** Check the ES connection status */
 const checkEsConnection = async () => {

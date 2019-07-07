@@ -17,12 +17,18 @@ console.log(chalk.blueBright("Reading data..."));
 jsonData = fs.readJsonSync("./data/pocket-two-list.json");
 console.log(chalk.blueBright("done.\n"));
 
-_.map(x => console.log(jsonData[x]), Object.keys(jsonData));
+let tempMap = new Map();
+// _.map(k => itemsMap.set(k, jsonData[k]), Object.keys(jsonData));
+let itemsMap = _.uniq(_.map(k => tempMap.set(k, jsonData[k]), Object.keys(jsonData)));
 
-const pullArticles = ({detailType = "complete", state = "all", sort = "oldest", count = 2, since}) => {
-  return [];
+console.log(itemsMap);
+
+const transformItems = itemsObj => {
+  const itemsMap = new Map();
+
+  return itemsMap;
 };
 
 module.exports = {
-  pullArticles
+  transformItems
 };
