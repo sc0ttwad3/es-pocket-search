@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/sc0ttwad3/es-pocket-search#readme",
   "dependencies": {
-    "@elastic/elasticsearch": "^7.1.0",
+    "@elastic/elasticsearch": "^7.2.0",
+    "@elastic/elasticsearch@7": "^7.1.0",
     "@hapi/boom": "^7.4.2",
     "@hapi/bourne": "^1.3.2",
     "@hapi/hoek": "^7.2.1",

@@ -1,19 +1,19 @@
-const chalk = require('chalk');
-const {checkEsConnection, client, createIndexWithMappings} = require('./es-connection');
-const {dd, du} = require('dumper');
-const fastify = require('fastify')({logger: false});
-require('dotenv').config();
+const chalk = require("chalk");
+const {checkEsConnection, client, createIndexWithMappings} = require("./es-connection");
+const {dd, du} = require("dumper.js");
+const fastify = require("fastify")({logger: false});
+require("dotenv").config();
 
 const port = process.env.PORT || 8888;
-const mode = process.env.NODE_ENV || 'unspecified';
+const mode = process.env.NODE_ENV || "unspecified";
 
 // Routing
 // --------------------------------------------------
 
 /** HOME PAGE */
 fastify.route({
-  method: 'GET',
-  url: '/',
+  method: "GET",
+  url: "/",
   schema: {
     // request needs to have a querystring with a `name` parameter
     //   querystring: {
@@ -22,9 +22,9 @@ fastify.route({
     // the response needs to be an object with an `hello` property of type 'string'
     response: {
       200: {
-        type: 'object',
+        type: "object",
         properties: {
-          hello: {type: 'string'}
+          hello: {type: "string"}
         }
       }
     }
@@ -34,43 +34,43 @@ fastify.route({
     // E.g. check authentication
   },
   handler: async (request, reply) => {
-    return {hello: 'world'};
+    return {hello: "world"};
   }
 });
 
 /** POCKET */
 fastify.route({
-  method: 'GET',
-  url: '/pocket',
+  method: "GET",
+  url: "/pocket",
   handler: async (request, reply) => {
-    return {this_is: 'pocket'};
+    return {this_is: "pocket"};
   }
 });
 
 /** LOGIN */
 fastify.route({
-  method: 'GET',
-  url: '/login',
+  method: "GET",
+  url: "/login",
   handler: async (request, reply) => {
-    return {this_is: 'login'};
+    return {this_is: "login"};
   }
 });
 
 /** LOGOUT */
 fastify.route({
-  method: 'GET',
-  url: '/logout',
+  method: "GET",
+  url: "/logout",
   handler: async (request, reply) => {
-    return {this_is: 'logout'};
+    return {this_is: "logout"};
   }
 });
 
 /** Callback from PocketAPI */
 fastify.route({
-  method: 'GET',
-  url: '/redirect',
+  method: "GET",
+  url: "/redirect",
   handler: async (request, reply) => {
-    return {this_is: 'redirect'};
+    return {this_is: "redirect"};
   }
 });
 
@@ -81,7 +81,7 @@ const start = async () => {
     await fastify.listen(port);
     //fastify.log.info(`server listening on ${fastify.server.address().port}`);;
     console.log(chalk.green(`[ ✓ ] server in ${mode} mode listening on ${fastify.server.address().port}`));
-    console.log(chalk.greenBright('[Press CTRL-C to stop]'));
+    console.log(chalk.greenBright("[Press CTRL-C to stop]"));
   } catch (err) {
     // fastify.log.error(err);
     console.log(chalk.redBright(`[ ✗ ] ${err}`));
@@ -89,8 +89,9 @@ const start = async () => {
   }
 };
 
-if (process.env.NODE_ENV == 'development') {
+if (process.env.NODE_ENV == "development") {
   checkEsConnection();
+  createIndexWithMappings("pocket");
 }
 
 // DOES NOT WORK

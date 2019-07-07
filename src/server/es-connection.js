@@ -1,28 +1,28 @@
-const chalk = require('chalk');
-const {Client} = require('@elastic/elasticsearch');
-const dotenv = require('dotenv').config();
+const chalk = require("chalk");
+const {Client} = require("@elastic/elasticsearch");
+const dotenv = require("dotenv").config();
 
 const index = process.env.ES_INDEX;
 const client = new Client({node: process.env.ES_HOST});
 
 /** Check the ES connection status */
 const checkEsConnection = async () => {
-  console.log('--------------------------------------------');
-  console.log(chalk.blue('Connecting to elasticsearch...'));
+  console.log("--------------------------------------------");
+  console.log(chalk.blue("Connecting to elasticsearch..."));
   try {
     const health = await client.cluster.health({});
     console.log(health);
-    console.log(chalk.greenBright('\n[✓] Connected to ES index...'));
+    console.log(chalk.greenBright("\n[✓] Connected to ES index..."));
   } catch (err) {
-    console.log(chalk.red('\n[ ] Connection failed.'), err);
+    console.log(chalk.red("\n[ ] Connection failed."), err);
   } finally {
-    console.log('--------------------------------------------');
+    console.log("--------------------------------------------");
   }
 };
 
 // DOES NOT WORK!
 /** Create index and mappings */
-const createIndexWithMappings = () => {
+const createIndexWithMappings = index => {
   if (client.indices.exists({index: index})) {
     console.log(chalk.red(`Index: ${index} already exists`));
   } else {
@@ -33,9 +33,9 @@ const createIndexWithMappings = () => {
         body: index_mappings
       });
     } catch (err) {
-      console.log(chalk.red('Failed to create index.'), err);
+      console.log(chalk.red("Failed to create index."), err);
     } finally {
-      console.log('--------------------------------------------');
+      console.log("--------------------------------------------");
     }
   }
 };
@@ -47,83 +47,83 @@ const index_mappings = {
   mappings: {
     properties: {
       excerpt: {
-        type: 'text'
+        type: "text"
       },
       favorite: {
-        type: 'integer'
+        type: "integer"
       },
       given_title: {
-        type: 'text'
+        type: "text"
       },
       given_url: {
-        type: 'text'
+        type: "text"
       },
       has_image: {
-        type: 'integer'
+        type: "integer"
       },
       image: {
         properties: {
           height: {
-            type: 'integer'
+            type: "integer"
           },
           item_id: {
-            type: 'text'
+            type: "text"
           },
           src: {
-            type: 'text'
+            type: "text"
           },
           width: {
-            type: 'integer'
+            type: "integer"
           }
         }
       },
       is_article: {
-        type: 'integer'
+        type: "integer"
       },
       is_index: {
-        type: 'integer'
+        type: "integer"
       },
       item_id: {
-        type: 'text'
+        type: "text"
       },
       lang: {
-        type: 'text'
+        type: "text"
       },
       resolved_id: {
-        type: 'text'
+        type: "text"
       },
       resolved_title: {
-        type: 'text'
+        type: "text"
       },
       resolved_url: {
-        type: 'text'
+        type: "text"
       },
       sort_id: {
-        type: 'integer'
+        type: "integer"
       },
       status: {
-        type: 'integer'
+        type: "integer"
       },
       time_added: {
-        type: 'date'
+        type: "date"
       },
       time_favorited: {
-        type: 'date'
+        type: "date"
       },
       time_read: {
-        type: 'date'
+        type: "date"
       },
       time_to_read: {
-        type: 'integer'
+        type: "integer"
       },
       time_updated: {
-        type: 'date'
+        type: "date"
       },
       top_image_url: {
-        type: 'text'
+        type: "text"
       },
       word_count: {
-        type: 'integer'
+        type: "integer"
       }
     }
   }
