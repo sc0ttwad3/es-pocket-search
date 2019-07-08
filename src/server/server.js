@@ -4,12 +4,12 @@ const {dd, du} = require("dumper.js");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
+const {getPocketItemsMap} = require("./process-items");
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
 
 // Routing
 // --------------------------------------------------
-
 /** HOME PAGE */
 fastify.route({
   method: "GET",
@@ -43,7 +43,11 @@ fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
-    return {this_is: "pocket"};
+    const pocketItemsMap = getPocketItemsMap();
+    return {
+      this_is: "pocket",
+      number_of_Pocket_items: `${pocketItemsMap.}`
+    };
   }
 });
 
@@ -93,9 +97,6 @@ if (process.env.NODE_ENV == "development") {
   checkEsConnection();
   createIndexWithMappings("pocket");
 }
-
-// DOES NOT WORK
-//createIndexWithMappings();
 
 // Start the server!
 start();
