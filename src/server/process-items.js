@@ -15,7 +15,7 @@ const getPocketItemsMap = (map = new Map()) => {
   console.log(chalk.blueBright("Reading data..."));
   try {
     // only the data inside .list
-    jsonData = fs.readJsonSync("./data/pocket-two-list.json");
+    jsonData = fs.readJsonSync("./data/pocket-two-compressed.json");
     dump(jsonData);
     console.log(chalk.blueBright("done.\n"));
     let createPocketItemsMap = _.uniq(_.map(k => map.set(k, jsonData[k]), Object.keys(jsonData)));
