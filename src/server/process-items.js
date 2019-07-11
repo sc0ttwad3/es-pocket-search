@@ -1,7 +1,9 @@
 const chalk = require("chalk");
 const fs = require("fs-extra");
 const {dump, dd} = require("dumper.js");
+require("dotenv").config();
 
+const {client} = require("./es-connection");
 /**
  * Manual curl to pull Pocket items.
  *
@@ -9,6 +11,8 @@ const {dump, dd} = require("dumper.js");
 
  *
  */
+
+const ES_INDEX = process.env.ES_INDEX;
 
 const getPocketItems = () => {
   console.log(chalk.blueBright("Reading data..."));
@@ -22,6 +26,29 @@ const getPocketItems = () => {
   }
 };
 
+const insertPocketItem = itemObj => {
+  if (client.indices.exists({index: ES_INDEX})) {
+    try {
+      console.log(`{ id: ${itemObj.item_id}, index: ${ES_INDEX}, body: ${itemObj} }`);
+      //  client.create({
+      //    id: itemObj.item_id,
+      //    index: ES_INDEX,
+      //    body: itemObj
+      //  });
+    } catch (err) {
+      console.log(chalk.red("Failed to create index."), err);
+    }
+  }
+};
+
+const sendItemsToSearchService = (arr = {}) => {
+  arr.forEach((_v, i) => {
+    console.log(`arr_index: ${i}: ${_v}`);
+    insertPocketItem(_v);
+  });
+};
+
 module.exports = {
-  getPocketItems
+  getPocketItems,
+  sendItemsToSearchService
 };
