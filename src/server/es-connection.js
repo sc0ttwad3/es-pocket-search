@@ -6,8 +6,7 @@ const index = process.env.ES_INDEX;
 const client = new Client({
   node: process.env.ES_HOST,
   maxRetries: 5,
-  requestTimeout: 20000,
-  sniffOnStart: true
+  requestTimeout: 20000
 });
 
 /** Check the ES connection status */
@@ -16,12 +15,10 @@ const checkEsConnection = async () => {
   console.log(chalk.blue("Connecting to elasticsearch..."));
   try {
     const health = await client.cluster.health({});
-    console.log(health);
+    // console.log(health);
     console.log(chalk.greenBright("\n[✓] Connected to ES index..."));
   } catch (err) {
     console.log(chalk.red("\n[ ] Connection failed."), err);
-  } finally {
-    console.log("--------------------------------------------");
   }
 };
 
@@ -39,8 +36,6 @@ const createIndexWithMappings = index => {
       });
     } catch (err) {
       console.log(chalk.red("Failed to create index."), err);
-    } finally {
-      console.log("--------------------------------------------");
     }
   }
 };

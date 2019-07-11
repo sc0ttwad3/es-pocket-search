@@ -4,7 +4,7 @@ const {dd, du} = require("dumper.js");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
-const {getPocketItemsMap} = require("./process-items");
+const {getPocketItems} = require("./process-items");
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
 
@@ -43,10 +43,12 @@ fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
-    const pocketItemsMap = getPocketItemsMap();
+    const pocketItems = await getPocketItems();
+    console.log(`number_of_Pocket_items: ${pocketItems.length}`);
+
     return {
       this_is: "pocket",
-      number_of_Pocket_items: `${pocketItemsMap.}`
+      pocketItems: pocketItems
     };
   }
 });

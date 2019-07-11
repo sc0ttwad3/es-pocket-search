@@ -1,7 +1,6 @@
 const chalk = require("chalk");
 const fs = require("fs-extra");
 const {dump, dd} = require("dumper.js");
-const _ = require("rambdax");
 
 /**
  * Manual curl to pull Pocket items.
@@ -11,23 +10,18 @@ const _ = require("rambdax");
  *
  */
 
-const getPocketItemsMap = (map = new Map()) => {
+const getPocketItems = () => {
   console.log(chalk.blueBright("Reading data..."));
   try {
     // only the data inside .list
     jsonData = fs.readJsonSync("./data/pocket-two-compressed.json");
-    dump(jsonData);
-    console.log(chalk.blueBright("done.\n"));
-    let createPocketItemsMap = _.uniq(_.map(k => map.set(k, jsonData[k]), Object.keys(jsonData)));
-    console.log(createPocketItemsMap);
+    // console.log(chalk.blueBright("done.\n"));
+    return Object.values(jsonData);
   } catch (error) {
     console.log(chalk.red(`Failed to read data:\n ${error}`));
   }
 };
 
-// If running this file directly use this
-getPocketItemsMap();
-
 module.exports = {
-  getPocketItemsMap
+  getPocketItems
 };
