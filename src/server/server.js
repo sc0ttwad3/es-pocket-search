@@ -4,7 +4,7 @@ const {dd, du} = require("dumper.js");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
-const {getPocketItems, sendItemsToSearchService} = require("./process-items");
+const {getPocketItems, processPocketItems_ES, search_es_pocket_item_Id} = require("./process-items");
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
 
@@ -43,9 +43,15 @@ fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
+    console.log(chalk.grey("Getting Pocket items..."));
     const pocketItems = await getPocketItems();
     console.log(`number_of_Pocket_items: ${pocketItems.length}\n`);
-    sendItemsToSearchService(pocketItems);
+
+    console.log(chalk.grey("Processing Pocket items..."));
+    //processPocketItems_ES(pocketItems);
+
+    console.log(chalk.grey("Search for Pocket item..."));
+    search_es_pocket_item_Id();
 
     return {
       this_is: "pocket",

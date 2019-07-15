@@ -26,29 +26,64 @@ const getPocketItems = () => {
   }
 };
 
-const insertPocketItem = itemObj => {
+const insertPocketItem_ES = itemObj => {
+  try {
+    console.log(`{ id: ${itemObj.item_id}, index: ${ES_INDEX}, body: ${itemObj} }`);
+    //    client.create({
+    //      id: itemObj.item_id,
+    //      index: ES_INDEX,
+    ///      body: itemObj
+    //    });
+  } catch (err) {
+    console.log(chalk.red("Failed to insert pocket item:"), err);
+  }
+};
+
+const search_es_pocket_item_Id = async (itemObj = {}) => {
+  try {
+    const result = await client.search({
+      index: "pocket",
+      body: {
+        query: {
+          terms: {
+            //"_id": itemObj._id
+            _id: "323752906"
+          }
+        }
+      }
+    });
+    console.log(`result = ${result}`);
+  } catch (err) {
+    console.log(chalk.red("Error searching for _id: "), err);
+  }
+};
+
+const updatePocketItem_ES = itemObj => {
   if (client.indices.exists({index: ES_INDEX})) {
     try {
       console.log(`{ id: ${itemObj.item_id}, index: ${ES_INDEX}, body: ${itemObj} }`);
-      //  client.create({
+      //  client.update({
       //    id: itemObj.item_id,
       //    index: ES_INDEX,
       //    body: itemObj
       //  });
     } catch (err) {
-      console.log(chalk.red("Failed to create index."), err);
+      console.log(chalk.red("Failed to update pocket item:"), err);
     }
   }
 };
 
-const sendItemsToSearchService = (arr = {}) => {
+const processPocketItems_ES = (arr = []) => {
   arr.forEach((_v, i) => {
-    console.log(`arr_index: ${i}: ${_v}`);
-    insertPocketItem(_v);
+    // check if Item exists already in ES
+    // insert or update item in ES
+    //console.log(`arr_index: ${i}: ${_v}`);
+    // insertPocketItem_ES(_v);
   });
 };
 
 module.exports = {
   getPocketItems,
-  sendItemsToSearchService
+  processPocketItems_ES,
+  search_es_pocket_item_Id
 };
