@@ -23,6 +23,17 @@ Made with ☕️ by [sc0ttwad3](http://www.sc0ttwad3.com)
 npm install
 ```
 
+## Notes
+
+### Access to local Docker/Kubernetes resources from WSL 2
+
+Because of the way WSL 2 runs, it has a different IP than the Windows 10 host, so from the command line when accessing localhost (the windows) you must use the IP address:
+
+```
+# example query
+$ url -XGET http://192.168.1.100:9200/pocket/_search d '{"query":{"terms":{"_id":["323752906","325344783"]}}}' | jq .
+```
+
 ## Usage
 
 ```sh

@@ -1,4 +1,5 @@
 const chalk = require("chalk");
+const axios = require("axios");
 const fs = require("fs-extra");
 const {dump, dd} = require("dumper.js");
 require("dotenv").config();
@@ -39,6 +40,25 @@ const insertPocketItem_ES = itemObj => {
   }
 };
 
+let searchById = async () => {
+  await axios
+    .get("http://localhost:9200/pocket/_search", {
+      query: {
+        terms: {
+          _id: ["323752906", "325344783"]
+        }
+      }
+    })
+    .then(
+      response => {
+        console.log(response.data);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+};
+
 const search_es_pocket_item_Id = async (itemObj = {}) => {
   try {
     const result = await client.search({
@@ -54,7 +74,7 @@ const search_es_pocket_item_Id = async (itemObj = {}) => {
     });
     console.log(`result = ${result}`);
   } catch (err) {
-    console.log(chalk.red("Error searching for _id: "), err);
+    console.log("Error searching for _id: ", err);
   }
 };
 
@@ -85,5 +105,6 @@ const processPocketItems_ES = (arr = []) => {
 module.exports = {
   getPocketItems,
   processPocketItems_ES,
-  search_es_pocket_item_Id
+  search_es_pocket_item_Id,
+  searchById
 };
