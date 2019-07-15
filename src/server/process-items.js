@@ -40,12 +40,14 @@ const insertPocketItem_ES = itemObj => {
   }
 };
 
-let searchById = async () => {
+// TODO: Add argument checking to make sure ID is string
+// Default hard-coded until then
+let searchById = async (id = "325344783") => {
   await axios
     .get("http://localhost:9200/pocket/_search", {
       query: {
         terms: {
-          _id: ["323752906", "325344783"]
+          _id: id
         }
       }
     })
@@ -57,25 +59,6 @@ let searchById = async () => {
         console.log(error);
       }
     );
-};
-
-const search_es_pocket_item_Id = async (itemObj = {}) => {
-  try {
-    const result = await client.search({
-      index: "pocket",
-      body: {
-        query: {
-          terms: {
-            //"_id": itemObj._id
-            _id: "323752906"
-          }
-        }
-      }
-    });
-    console.log(`result = ${result}`);
-  } catch (err) {
-    console.log("Error searching for _id: ", err);
-  }
 };
 
 const updatePocketItem_ES = itemObj => {
@@ -105,6 +88,5 @@ const processPocketItems_ES = (arr = []) => {
 module.exports = {
   getPocketItems,
   processPocketItems_ES,
-  search_es_pocket_item_Id,
   searchById
 };

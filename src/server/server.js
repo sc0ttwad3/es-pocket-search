@@ -1,15 +1,14 @@
 const chalk = require("chalk");
-const {checkEsConnection, client, createIndexWithMappings} = require("./es-connection");
-const {dd, du} = require("dumper.js");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
-const {getPocketItems, processPocketItems_ES, search_es_pocket_item_Id, searchById} = require("./process-items");
+const {searchElasticByArticleId} = require("./controllers/articles-controller");
+
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
 
 // Routing
-// --------------------------------------------------
+
 /** HOME PAGE */
 fastify.route({
   method: "GET",
@@ -44,20 +43,12 @@ fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
-    console.log(chalk.grey("Getting Pocket items..."));
-    const pocketItems = await getPocketItems();
-    console.log(`number_of_Pocket_items: ${pocketItems.length}\n`);
-
-    console.log(chalk.grey("Processing Pocket items..."));
-    //processPocketItems_ES(pocketItems);
-
-    console.log(chalk.grey("Search for Pocket item..."));
-    //search_es_pocket_item_Id();
-    searchById();
+    console.log(chalk.grey("Search for Pocket article..."));
+    const foundArticle = await searchElasticByArticleId();
 
     return {
       this_is: "pocket",
-      pocketItems: pocketItems
+      pocketArticle: foundArticle
     };
   }
 });
@@ -90,7 +81,6 @@ fastify.route({
 });
 
 // Boostrap server!
-// --------------------------------------------------
 const start = async () => {
   try {
     await fastify.listen(port);
@@ -104,9 +94,8 @@ const start = async () => {
   }
 };
 
+// TODO: Add checks for working es server and "pocket" index
 if (process.env.NODE_ENV == "development") {
-  checkEsConnection();
-  createIndexWithMappings("pocket");
 }
 
 // Start the server!
