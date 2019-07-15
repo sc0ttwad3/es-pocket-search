@@ -15,6 +15,7 @@ fastify.route({
   method: "GET",
   url: "/",
   schema: {
+    // Examples of schema use
     // request needs to have a querystring with a `name` parameter
     //   querystring: {
     //     name: { type: 'string' }
