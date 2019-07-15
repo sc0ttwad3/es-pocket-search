@@ -41,7 +41,7 @@
     "node-getpocket": "^1.0.0",
     "path": "^0.12.7",
     "rambda": "^2.11.2",
-    "rambdax": "^2.10.2",
+    "rambdax": "^2.11.0",
     "ramda": "^0.26.1",
     "request": "^2.88.0",
     "stdio": "^0.2.7"
