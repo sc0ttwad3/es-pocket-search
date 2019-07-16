@@ -40,27 +40,6 @@ const insertPocketItem_ES = itemObj => {
   }
 };
 
-// TODO: Add argument checking to make sure ID is string
-// Default hard-coded until then
-let searchById = async (id = "325344783") => {
-  await axios
-    .get("http://localhost:9200/pocket/_search", {
-      query: {
-        terms: {
-          _id: id
-        }
-      }
-    })
-    .then(
-      response => {
-        console.log(response.data);
-      },
-      error => {
-        console.log(error);
-      }
-    );
-};
-
 const updatePocketItem_ES = itemObj => {
   if (client.indices.exists({index: ES_INDEX})) {
     try {
@@ -87,6 +66,5 @@ const processPocketItems_ES = (arr = []) => {
 
 module.exports = {
   getPocketItems,
-  processPocketItems_ES,
-  searchById
+  processPocketItems_ES
 };

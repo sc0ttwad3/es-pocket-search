@@ -10,7 +10,7 @@ const getPocketArticlesFromFile = () => {
   console.log(chalk.blueBright("Reading articles data from file..."));
   try {
     // only the data inside .list property of pocket exported .json
-    jsonData = fs.readJsonSync("./data/pocket-two-compressed.json");
+    jsonData = fs.readJsonSync("../../data/<need a file>");
     return Object.values(jsonData);
   } catch (error) {
     console.log(chalk.red(`Failed to read data:\n ${error}`));
@@ -19,25 +19,17 @@ const getPocketArticlesFromFile = () => {
 
 // TODO: Add argument checking to make sure ID is string
 // Default hard-coded until then
-let searchElasticByArticleId = async (id = "325344783") => {
-  await axios
-    .get("http://localhost:9200/pocket/_search", {
-      query: {
-        terms: {
-          _id: id
-        }
-      }
-    })
-    .then(
-      response => {
-        console.log(response.data);
-        console.log("\n\n");
-        dump(response.data.hits);
-      },
-      error => {
-        console.log(error);
-      }
-    );
+let searchElasticByArticleId = (id = "325344783") => {
+  axios.get(`http://localhost:9200/pocket/_doc/${id}`).then(
+    response => {
+      console.log(response.data);
+      console.log("\n\n");
+      dump(response.data);
+    },
+    error => {
+      console.log(error);
+    }
+  );
 };
 
 module.exports = {
