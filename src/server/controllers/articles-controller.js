@@ -4,6 +4,8 @@ const fs = require("fs-extra");
 const {dump, dd} = require("dumper.js");
 require("dotenv").config();
 
+const ES_HOST = process.env.ES_HOST;
+const ES_PORT = process.env.ES_PORT || 9200;
 const ES_INDEX = process.env.ES_INDEX;
 
 const getPocketArticlesFromFile = () => {
@@ -20,7 +22,7 @@ const getPocketArticlesFromFile = () => {
 // TODO: Add argument checking to make sure ID is string
 // Default hard-coded until then
 let searchElasticByArticleId = (id = "325344783") => {
-  axios.get(`http://localhost:9200/pocket/_doc/${id}`).then(
+  axios.get(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_doc/${id}`).then(
     response => {
       console.log(response.data);
       console.log("\n\n");
