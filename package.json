@@ -37,6 +37,7 @@
     "fastify": "^2.6.0",
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
+    "humanize-duration": "^3.19.0",
     "mocha": "^6.1.4",
     "node-getpocket": "^1.0.0",
     "path": "^0.12.7",

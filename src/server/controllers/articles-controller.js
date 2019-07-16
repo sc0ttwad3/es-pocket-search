@@ -1,6 +1,8 @@
 const chalk = require("chalk");
 const axios = require("axios");
 const fs = require("fs-extra");
+const humanizeDuration = require("humanize-duration");
+
 const {dump, dd} = require("dumper.js");
 require("dotenv").config();
 
@@ -27,6 +29,8 @@ let searchElasticByArticleId = (id = "325344783") => {
       console.log(response.data);
       console.log("\n\n");
       dump(response.data);
+
+      console.log("\n\n");
     },
     error => {
       console.log(error);
