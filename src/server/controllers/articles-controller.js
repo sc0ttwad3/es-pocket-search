@@ -23,14 +23,11 @@ const getPocketArticlesFromFile = () => {
 
 // TODO: Add argument checking to make sure ID is string
 // Default hard-coded until then
-const searchId = (id = "325344783") => {
+const searchById = (id = "325344783") => {
   axios.get(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_doc/${id}`).then(
     response => {
       console.log("Found article");
       console.log(response.data);
-      console.log("\n\n");
-      dump(response.data);
-
       console.log("\n\n");
     },
     error => {
@@ -45,9 +42,6 @@ const deleteById = id => {
       console.log("Article deleted.");
       console.log(response.data);
       console.log("\n\n");
-      dump(response.data);
-
-      console.log("\n\n");
     },
     error => {
       console.log(error);
@@ -56,13 +50,11 @@ const deleteById = id => {
 };
 
 const indexById = (article = {}) => {
-  axios.put(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_doc/${article.item_id}`, article).then(
+  // using _create instead of _doc endpoint so if Id already exists this will fail
+  axios.put(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_create/${article.item_id}`, article).then(
     response => {
       console.log("Article indexed.");
       console.log(response.data);
-      console.log("\n\n");
-      dump(response.data);
-
       console.log("\n\n");
     },
     error => {

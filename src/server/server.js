@@ -2,7 +2,7 @@ const chalk = require("chalk");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
-const {searchById} = require("./controllers/articles-controller");
+const {searchById, deleteById} = require("./controllers/articles-controller");
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
@@ -45,6 +45,11 @@ fastify.route({
   handler: async (request, reply) => {
     console.log(chalk.grey("Search for Pocket article..."));
     const foundArticle = await searchById();
+
+    console.log(chalk.redBright("Deleting article..."));
+
+    // worked!
+    //const result = await deleteById("323752906");
 
     return {
       this_is: "pocket",
