@@ -2,7 +2,7 @@ const chalk = require("chalk");
 const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
-const {searchElasticByArticleId} = require("./controllers/articles-controller");
+const {searchById} = require("./controllers/articles-controller");
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
@@ -44,7 +44,7 @@ fastify.route({
   url: "/pocket",
   handler: async (request, reply) => {
     console.log(chalk.grey("Search for Pocket article..."));
-    const foundArticle = await searchElasticByArticleId();
+    const foundArticle = await searchById();
 
     return {
       this_is: "pocket",
