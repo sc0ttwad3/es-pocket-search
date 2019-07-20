@@ -3,6 +3,7 @@ const fastify = require("fastify")({logger: false});
 require("dotenv").config();
 
 const {searchById, deleteById} = require("./controllers/articles-controller");
+const search = require("./search");
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
@@ -43,12 +44,14 @@ fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
-    console.log(chalk.grey("Search for Pocket article..."));
+    console.log(chalk.grey("Search for Pocket article by Id..."));
     const foundArticle = await searchById();
 
-    console.log(chalk.redBright("Deleting article..."));
+    console.log(chalk.green("Searching: word_count for: 1221..."));
+    const results = await search.queryTerm("1221");
+    console.log(results);
 
-    // worked!
+    // console.log(chalk.redBright("Deleting article..."));
     //const result = await deleteById("323752906");
 
     return {

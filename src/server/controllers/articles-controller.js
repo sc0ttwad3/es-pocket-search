@@ -50,8 +50,8 @@ const deleteById = id => {
 };
 
 const indexById = (article = {}) => {
-  // using _create instead of _doc endpoint so if Id already exists this will fail
-  axios.put(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_create/${article.item_id}`, article).then(
+  // use _create instead of _doc endpoint so if Id already exists this will fail
+  axios.put(`http://${ES_HOST}:${ES_PORT}/${ES_INDEX}/_doc/${article.item_id}`, article).then(
     response => {
       console.log("Article indexed.");
       console.log(response.data);
