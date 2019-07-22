@@ -27,7 +27,7 @@ const getPocketItems = () => {
   }
 };
 
-const insertPocketItem_ES = itemObj => {
+const indexArticle = itemObj => {
   try {
     console.log(`{ id: ${itemObj.item_id}, index: ${ES_INDEX}, body: ${itemObj} }`);
     //    client.create({
@@ -40,7 +40,7 @@ const insertPocketItem_ES = itemObj => {
   }
 };
 
-const updatePocketItem_ES = itemObj => {
+const updateArticle = itemObj => {
   if (client.indices.exists({index: ES_INDEX})) {
     try {
       console.log(`{ id: ${itemObj.item_id}, index: ${ES_INDEX}, body: ${itemObj} }`);
@@ -60,7 +60,7 @@ const processPocketItems_ES = (arr = []) => {
     // check if Item exists already in ES
     // insert or update item in ES
     //console.log(`arr_index: ${i}: ${_v}`);
-    // insertPocketItem_ES(_v);
+    // indexArticle(_v);
   });
 };
 

@@ -1,4 +1,5 @@
 const axios = require("axios");
+const esb = require("elastic-builder");
 require("dotenv").config();
 
 const ES_HOST = process.env.ES_HOST;
@@ -28,5 +29,9 @@ module.exports = {
       }
     );
     // return client.search({index, type, body});
+  },
+
+  searchFor(term, offset = 0) {
+    const requestBody = esb.requestBodySearch().query(esb.matchQuery("message", "this is a test"));
   }
 };

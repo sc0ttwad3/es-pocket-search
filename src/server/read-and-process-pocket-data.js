@@ -11,12 +11,14 @@ const _ = require("rambdax");
 
  *
  */
+const bulkIndex = `{index: {_index: "pocket", _id: ${itemObj.item_id}}}`;
 
 console.log(chalk.blueBright("Reading data..."));
 // only the data inside .list
 jsonData = fs.readJsonSync("./data/pocket-two-list.json");
 console.log(chalk.blueBright("done.\n"));
 
+// TODO:  Create a function to zip? the buildIndex line first, then map the jsonData line
 _.map(x => console.log(jsonData[x]), Object.keys(jsonData));
 
 const pullArticles = ({detailType = "complete", state = "all", sort = "oldest", count = 2, since}) => {
