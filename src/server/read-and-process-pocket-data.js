@@ -16,19 +16,19 @@ const R = require("rambdax");
 
 console.log(chalk.blueBright("Reading data..."));
 jsonData = fs.readJsonSync("./data/pocket-two-list.json"); // only the data inside .list
-console.log(chalk.blueBright("done.\n"));
 
-// Elasticsearch Bulk API takes DNJSON and \n is the delimeter
+// Elasticsearch Bulk API takes DNJSON where \n is the delimeter
 //_.map(x => console.log(jsonData[x]), Object.keys(jsonData));
 const bulkOpTemplate = key =>
   `
-{index: {_index: "pocket", _id: ${key}}}
-`.trim();
+  {index: {_index: "pocket", _id: ${key}}}
+  `.trim();
 
-const objAtKey = key => jsonData[key];
+const objAtKey = (name, obj) => obj[name];
 const printOps = key => {
+  const obj = objAtKey(key, jsonData);
   console.log(bulkOpTemplate(key));
-  console.log(objAtKey(key));
+  console.log(obj);
 };
 
 R.map(key => printOps(key), Object.keys(jsonData));
