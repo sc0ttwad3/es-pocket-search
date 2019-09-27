@@ -4,6 +4,7 @@ require("dotenv").config();
 
 const {searchById, deleteById} = require("./controllers/articles-controller");
 const search = require("./search");
+const pocket = require("./pocket");
 
 const port = process.env.PORT || 8888;
 const mode = process.env.NODE_ENV || "unspecified";
@@ -39,13 +40,24 @@ fastify.route({
   }
 });
 
-/** POCKET */
 fastify.route({
   method: "GET",
   url: "/pocket",
   handler: async (request, reply) => {
-    console.log(chalk.grey("Search for Pocket article by Id..."));
-    const foundArticle = await searchById();
+    console.log(chalk.blue("Pulling Pocket articles/items data..."));
+    const jsonData = pocket.articles();
+    console.log(jsonData);
+    return {this_is: "pocket"};
+  }
+});
+
+/** POCKET */
+fastify.route({
+  method: "GET",
+  url: "/search",
+  handler: async (request, reply) => {
+    //   console.log(chalk.grey("Search for Pocket article by Id..."));
+    //   const foundArticle = await searchById();
 
     console.log(chalk.green("Searching: word_count for: 1221..."));
     const results = await search.queryTerm("1221");
@@ -55,8 +67,7 @@ fastify.route({
     //const result = await deleteById("323752906");
 
     return {
-      this_is: "pocket",
-      pocketArticle: foundArticle
+      this_is: "pocket"
     };
   }
 });

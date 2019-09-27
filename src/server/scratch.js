@@ -1,4 +1,4 @@
-const R = require("rambdax");
+const R = require("ramda");
 const chalk = require("chalk");
 
 console.log(chalk.blueBright("Starting..."));

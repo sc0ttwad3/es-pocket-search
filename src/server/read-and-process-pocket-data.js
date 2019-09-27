@@ -1,7 +1,7 @@
 const chalk = require("chalk");
 const fs = require("fs-extra");
 const {dump, dd} = require("dumper.js");
-const R = require("rambdax");
+const R = require("ramda");
 
 /**
  * Manual process
@@ -14,21 +14,20 @@ const R = require("rambdax");
 // const bulkIndex = `{index: {_index: "pocket", _id: ${itemObj.item_id}}}`;
 // const bulkIndexLine = `{index: {_index: "pocket", _id: ${x}}}`;
 
-console.log(chalk.blueBright("Reading data..."));
-jsonData = fs.readJsonSync("./data/pocket-two-list.json"); // only the data inside .list
+// console.log(chalk.blueBright("Reading data..."));
+jsonData = fs.readJsonSync("./data/pocket-export.json"); // only the data inside .list
 
 // Elasticsearch Bulk API takes DNJSON where \n is the delimeter
 //_.map(x => console.log(jsonData[x]), Object.keys(jsonData));
 const bulkOpTemplate = key =>
   `
-  {index: {_index: "pocket", _id: ${key}}}
+  {"index": {"_index": "pocket", "_id": "${key}"}}
   `.trim();
 
-const objAtKey = (name, obj) => obj[name];
 const printOps = key => {
-  const obj = objAtKey(key, jsonData);
+  const articleObjAtKey = R.view(R.lensProp(key), jsonData);
   console.log(bulkOpTemplate(key));
-  console.log(obj);
+  console.log(articleObjAtKey);
 };
 
 R.map(key => printOps(key), Object.keys(jsonData));

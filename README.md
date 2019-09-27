@@ -13,6 +13,7 @@
 </p>
 
 Made with ☕️ by [sc0ttwad3](http://www.sc0ttwad3.com)
+
 > Node server for interacting with Pocket data as searchable elasticsearch indexes
 
 ### 🏠 [Homepage](https://github.com/sc0ttwad3/es-pocket-search#readme)
@@ -27,11 +28,13 @@ npm install
 
 ### Access to local Docker/Kubernetes resources from WSL 2
 
+UPDATE: localhost now works in WSL 2
+
 Because of the way WSL 2 runs, it has a different IP than the Windows 10 host, so from the command line when accessing localhost (the windows) you must use the IP address:
 
 ```
 # example query
-$ url -XGET http://192.168.1.100:9200/pocket/_search d '{"query":{"terms":{"_id":["323752906","325344783"]}}}' | jq .
+$ curl -XGET http://192.168.1.100:9200/pocket/_search d '{"query":{"terms":{"_id":["323752906","325344783"]}}}' | jq .
 ```
 
 ## Usage
@@ -50,7 +53,7 @@ npm run test
 
 👤 **Scott Wade &lt;sc0ttwad3@gmail.com&gt; (http://sc0ttwad3.com)**
 
-* Github: [@sc0ttwad3](https://github.com/sc0ttwad3)
+- Github: [@sc0ttwad3](https://github.com/sc0ttwad3)
 
 ## 🤝 Contributing
 
@@ -65,5 +68,6 @@ Give a ⭐️ if this project helped you!
 Copyright © 2019 [Scott Wade &lt;sc0ttwad3@gmail.com&gt; (http://sc0ttwad3.com)](https://github.com/sc0ttwad3).<br />
 This project is [MIT](https://github.com/sc0ttwad3/es-pocket-search/blob/master/LICENSE) licensed.
 
-***
+---
+
 _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
