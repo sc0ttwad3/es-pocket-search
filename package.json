@@ -35,7 +35,7 @@
     "dotenv": "^8.0.0",
     "elastic-builder": "^2.3.1",
     "express": "^4.17.1",
-    "fastify": "^2.6.0",
+    "fastify": "^2.15.1",
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
     "humanize-duration": "^3.19.0",
