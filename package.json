@@ -39,7 +39,7 @@
     "fs": "0.0.1-security",
     "fs-extra": "^8.1.0",
     "humanize-duration": "^3.19.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "node-getpocket": "^1.0.0",
     "path": "^0.12.7",
     "ramda": "^0.26.1",
